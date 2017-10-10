@@ -9,4 +9,4 @@
 	"name" : "CypressAbstractFileUrl",
 	"pools" : [
 		 ],
-	"super" : "FileUrl" }
+	"super" : "CypressFileUrl" }

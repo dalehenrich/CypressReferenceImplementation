@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-MesssageDigest",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressMessageDigestStream",
+	"pools" : [
+		 ],
+	"super" : "WriteStream" }

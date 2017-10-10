@@ -4,12 +4,17 @@ category: accessing
 "
 classesInPackageNamed: aString
 
-	| packageName candidateName |
+	| packageName classes |
 	packageName := aString asLowercase.
-	^(System myUserProfile symbolList allSatisfying: 
-			[:each |
-			each isBehavior and: 
-					[candidateName := each category asLowercase.
-					candidateName = packageName
-						or: [candidateName beginsWith: packageName , '-']]])
-		sortAscending: #('name')
+	classes := Array new.
+	System myUserProfile symbolList do: 
+			[:dict |
+			classes
+				addAll: (dict select: 
+							[:each |
+							each isBehavior and: 
+									[| candidateName |
+									candidateName := each category asLowercase.
+									candidateName = packageName
+										or: [(candidateName indexOfSubCollection: packageName , '-') = 1]]])].
+	^classes sortAscending: #('name')

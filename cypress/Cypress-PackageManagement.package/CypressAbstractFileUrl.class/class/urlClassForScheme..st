@@ -4,5 +4,5 @@ category: parsing
 "
 urlClassForScheme: scheme
 
-	scheme isNil ifTrue: [^FileUrl].
+	scheme isNil ifTrue: [^CypressFileUrl].
 	^super urlClassForScheme: scheme

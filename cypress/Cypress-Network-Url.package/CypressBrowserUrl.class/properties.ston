@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-Network-Url",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressBrowserUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressGenericUrl" }

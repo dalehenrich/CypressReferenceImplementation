@@ -5,4 +5,6 @@ category: dependency
 requirements
 	"Answer list of global names required by this definition"
 
-	^{self superclassName}
+  self superclassName = 'nil'
+    ifTrue: [ ^ #() ].
+  ^{self superclassName}

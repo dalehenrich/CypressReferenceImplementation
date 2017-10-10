@@ -14,7 +14,7 @@ createOrReviseByteClass
 		byteSubclass: self name
 		classVars: (self classVarNames collect: [:each | each asSymbol])
 		classInstVars: (self classInstVarNames collect: [:each | each asSymbol])
-		poolDictionaries: #()
+		poolDictionaries: self poolDictionaryList
 		inDictionary: (self symbolDictionaryForClassNamed: self name)
 		options: #())
 			category: category;

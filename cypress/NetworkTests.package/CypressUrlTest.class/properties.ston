@@ -5,8 +5,9 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		 ],
-	"name" : "FileUrlTest",
+		"url",
+		"baseUrl" ],
+	"name" : "CypressUrlTest",
 	"pools" : [
 		 ],
 	"super" : "NetworkTestCase" }

@@ -3,4 +3,4 @@ notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT lice
 category: testing
 "
 testHttps
-	self assert: 'https://encrypted.google.com' asUrl scheme = 'https'.
+	self assert: (CypressUrl absoluteFromText: 'https://encrypted.google.com') scheme = 'https'.

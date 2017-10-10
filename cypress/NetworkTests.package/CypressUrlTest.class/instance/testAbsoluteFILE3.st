@@ -27,7 +27,7 @@ testAbsoluteFILE3
   self assert: url isAbsolute.
   url := CypressFileUrl absoluteFromText: 'dir/file.txt'.
   self assert: url asString = 'file:dir/file.txt'.
-  url := 'file:dir/file.txt' asUrl.
+  url := CypressFileUrl absoluteFromText: 'file:dir/file.txt'.
   self assert: url asString = 'file:dir/file.txt'.
   self deny: url isAbsolute.
   url := CypressFileUrl absoluteFromText: 'c:/dir/file.txt'.

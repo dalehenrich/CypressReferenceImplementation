@@ -6,7 +6,7 @@
 		 ],
 	"instvars" : [
 		 ],
-	"name" : "HTTPEncodingTest",
+	"name" : "CypressHTTPEncodingTest",
 	"pools" : [
 		 ],
 	"super" : "NetworkTestCase" }

@@ -7,7 +7,7 @@ writeWithHttpEscapes: aCollection on: aStream
 	escaped to their %XX form, for use in HTTP transactions.
 	Note that Utf8s containing code points over 128 will not work properly here."
 
-	aCollection do: 
+	aCollection encodeAsUTF8IntoString do: 
 			[:each |
 			| char |
 			char := each asCharacter.

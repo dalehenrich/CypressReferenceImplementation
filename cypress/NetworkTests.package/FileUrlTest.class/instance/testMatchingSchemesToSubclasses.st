@@ -4,13 +4,13 @@ category: testing
 "
 testMatchingSchemesToSubclasses
 
-	{ { nil. GenericUrl }. "Assume HTTP by default (i.e. when no scheme is provided)"
-	{ 'isbn'. GenericUrl }. "Handle unknown Url types with GenericUrl"
-	{ 'http'. HttpUrl }.
-	{ 'https'. HttpsUrl }.
-	{ 'file'. FileUrl }.
-	{ 'mailto'. MailtoUrl }.
-	{ 'browser'. BrowserUrl } } do: [ :pair | | schemeString urlClassToUse |
+	{ { nil. CypressGenericUrl }. "Assume HTTP by default (i.e. when no scheme is provided)"
+	{ 'isbn'. CypressGenericUrl }. "Handle unknown Url types with GenericUrl"
+	{ 'http'. CypressHttpUrl }.
+	{ 'https'. CypressHttpsUrl }.
+	{ 'file'. CypressFileUrl }.
+	{ 'mailto'. CypressMailtoUrl }.
+	{ 'browser'. CypressBrowserUrl } } do: [ :pair | | schemeString urlClassToUse |
 		schemeString := pair first.
 		urlClassToUse := pair at: 2.
-		self assert: (Url urlClassForScheme: schemeString) equals: urlClassToUse ].
+		self assert: (CypressUrl urlClassForScheme: schemeString) equals: urlClassToUse ].

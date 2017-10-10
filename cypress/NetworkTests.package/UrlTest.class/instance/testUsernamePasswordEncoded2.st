@@ -10,7 +10,7 @@ testUsernamePasswordEncoded2
 	('Jeannde.d''Arc' 'jaiunesécret' 'orleans' 8080 'une/deux/trois')
 	('HaXor@roxor:fnac' 'my~Pa$§wert' 'cbase' 42 'do/not_try')
 	) do: [:urlParts | |theUrl|
-			theUrl := ('http://', (urlParts at: 1) encodeForHTTP, ':', (urlParts at: 2) encodeForHTTP, '@', (urlParts at: 3), ':', (urlParts at: 4) printString, '/', (urlParts at: 5)) asUrl.
+			theUrl := CypressUrl absoluteFromText: ('http://', (urlParts at: 1) encodeForHTTP, ':', (urlParts at: 2) encodeForHTTP, '@', (urlParts at: 3), ':', (urlParts at: 4) printString, '/', (urlParts at: 5)).
 		self assert: (theUrl schemeName = 'http').
 		self assert: (theUrl username = (urlParts at: 1)).
 		self assert: (theUrl password = (urlParts at: 2)).

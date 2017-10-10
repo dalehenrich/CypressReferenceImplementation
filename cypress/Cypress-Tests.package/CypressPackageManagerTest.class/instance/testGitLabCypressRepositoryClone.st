@@ -8,8 +8,7 @@ testGitLabCypressRepositoryClone
   | repo packageNames expected |
   repo := CypressAbstractRepository
     onUrl:
-      'gitcypress://gitlab.com/external-sample/external-sample:master/repository'
-        asUrl
+      (CypressUrl absoluteFromText: 'gitcypress://gitlab.com/external-sample/external-sample:master/repository')
     alias: ''.
   packageNames := repo packageNames.
   expected := #('BaseliineOfExternal' 'External-Core' 'External-Tests').

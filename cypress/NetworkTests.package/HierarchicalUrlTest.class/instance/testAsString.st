@@ -4,7 +4,7 @@ category: testing
 "
 testAsString
 	| url |
-	url := HierarchicalUrl new
+	url := CypressHierarchicalUrl new
 		schemeName: 'ftp'
 		authority: 'localhost'
 		path: #('path' 'to' 'file')

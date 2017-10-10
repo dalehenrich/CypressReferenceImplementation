@@ -8,7 +8,7 @@ testBitBucketFiletreeRepositoryClone
   | repo packageNames expected |
   repo := CypressAbstractRepository
     onUrl:
-      'gitfiletree://bitbucket.org/dalehenrich/external:master/repository' asUrl
+      (CypressUrl absoluteFromText: 'gitfiletree://bitbucket.org/dalehenrich/external:master/repository')
     alias: ''.
   packageNames := repo packageNames.
   expected := #('BaseliineOfExternal' 'External-Core' 'External-Tests').

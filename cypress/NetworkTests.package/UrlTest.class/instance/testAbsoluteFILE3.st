@@ -7,35 +7,35 @@ testAbsoluteFILE3
 
   {'file:'.
   'file:/'.
-  'file://'} do: [ :s | url := FileUrl absoluteFromText: s.
+  'file://'} do: [ :s | url := CypressFileUrl absoluteFromText: s.
       self assert: url asString = 'file:/'.
       self assert: url host = ''.
       self assert: url isAbsolute ].
-  url := FileUrl absoluteFromText: 'file://localhost/dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: 'file://localhost/dir/file.txt'.
   self assert: url asString = 'file://localhost/dir/file.txt'.
   self assert: url host = 'localhost'.
-  url := FileUrl absoluteFromText: 'file://localhost/dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: 'file://localhost/dir/file.txt'.
   self assert: url asString = 'file://localhost/dir/file.txt'.
   self assert: url host = 'localhost'.
   self assert: url isAbsolute.
-  url := FileUrl absoluteFromText: 'file:/dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: 'file:/dir/file.txt'.
   self assert: url asString = 'file:/dir/file.txt'.
   self assert: url host = ''.
   self assert: url isAbsolute.
-  url := FileUrl absoluteFromText: '/dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: '/dir/file.txt'.
   self assert: url asString = 'file:/dir/file.txt'.
   self assert: url isAbsolute.
-  url := FileUrl absoluteFromText: 'dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: 'dir/file.txt'.
   self assert: url asString = 'file:dir/file.txt'.
   url := 'file:dir/file.txt' asUrl.
   self assert: url asString = 'file:dir/file.txt'.
   self deny: url isAbsolute.
-  url := FileUrl absoluteFromText: 'c:/dir/file.txt'.
+  url := CypressFileUrl absoluteFromText: 'c:/dir/file.txt'.
   self assert: url asString = 'file:/c%3A/dir/file.txt'.
   self assert: url isAbsolute.	"Only a drive letter doesn't refer to a directory."
-  url := FileUrl absoluteFromText: 'c:'.
+  url := CypressFileUrl absoluteFromText: 'c:'.
   self assert: url asString = 'file:/c%3A/'.
   self assert: url isAbsolute.
-  url := FileUrl absoluteFromText: 'c:/'.
+  url := CypressFileUrl absoluteFromText: 'c:/'.
   self assert: url asString = 'file:/c%3A/'.
   self assert: url isAbsolute

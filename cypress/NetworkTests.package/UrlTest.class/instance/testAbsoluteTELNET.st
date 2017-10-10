@@ -4,7 +4,7 @@ category: tests
 "
 testAbsoluteTELNET
 	
-	url := 'telNet:chaos.resnet.gatech.edu#goo' asUrl.
+	url := CypressUrl absoluteFromText: 'telNet:chaos.resnet.gatech.edu#goo'.
 
 	self assert: url schemeName = 'telnet'.
 	self assert: url locator = 'chaos.resnet.gatech.edu'.

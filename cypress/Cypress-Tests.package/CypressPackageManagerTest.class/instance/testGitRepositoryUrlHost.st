@@ -10,7 +10,7 @@ testGitRepositoryUrlHost
       'github.com'}.
       {'://bitbucket.com/dalehenrich/filetree/repository'.
       'bitbucket.com'}} do: [ :ar | | url expected host |
-          url := (scheme , (ar at: 1)) asUrl.
+          url := CypressUrl absoluteFromText: (scheme , (ar at: 1)).
           expected := ar at: 2.
           host := url host.
           self assert: host = expected ] ]

@@ -4,7 +4,7 @@ category: tests
 "
 testAbsoluteFILE
 	
-	url := Url absoluteFromText: 'file:/etc/passwd#foo'.
+	url := CypressUrl absoluteFromText: 'file:/etc/passwd#foo'.
 
 	self assert: url schemeName = 'file'.
 	self assert: url path first = 'etc'.

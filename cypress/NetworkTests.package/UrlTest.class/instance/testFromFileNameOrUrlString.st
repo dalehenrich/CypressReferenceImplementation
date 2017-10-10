@@ -4,12 +4,12 @@ category: testing
 "
 testFromFileNameOrUrlString
 
-	url := Url absoluteFromFileNameOrUrlString: 'asdf'.
+	url := CypressUrl absoluteFromFileNameOrUrlString: 'asdf'.
 	self assert: url schemeName = 'file'.
 	self assert: url fragment isNil.
-	self assert: url class = FileUrl.
+	self assert: url class = CypressFileUrl.
 
-	url := Url absoluteFromFileNameOrUrlString: 'http://209.143.91.36/super/SuperSwikiProj/AAEmptyTest.001.pr'.
+	url := CypressUrl absoluteFromFileNameOrUrlString: 'http://209.143.91.36/super/SuperSwikiProj/AAEmptyTest.001.pr'.
 	self assert: url schemeName = 'http'.
 	self assert: url fragment isNil.
-	self assert: url class = HttpUrl.
+	self assert: url class = CypressHttpUrl.

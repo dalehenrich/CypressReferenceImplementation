@@ -18,7 +18,7 @@ testGitRepositoryUrlProjectBranchOrTag
       'pharo5.0_dev/branch'}.
       {'://github.com/dalehenrich/filetree:pharo5.0_dev\/branch'.
       'pharo5.0_dev/branch'}} do: [ :ar | | url expected projectBranchOrTag |
-          url := (scheme , (ar at: 1)) asUrl.
+          url := CypressUrl absoluteFromText: (scheme , (ar at: 1)).
           expected := ar at: 2.
           projectBranchOrTag := url projectBranchOrTag.
           self assert: projectBranchOrTag = expected ] ]

@@ -20,7 +20,7 @@ testGitRepositoryUrlPrintString
       {'://github.com/dalehenrich/filetree:pharo5.0_dev\/branch'.
       (scheme , '://github.com/dalehenrich/filetree:pharo5.0_dev\/branch/')}}
         do: [ :ar | | url expected printString |
-          url := (scheme , (ar at: 1)) asUrl.
+          url := CypressUrl absoluteFromText: (scheme , (ar at: 1)).
           expected := ar at: 2.
           printString := url printString.
           self assert: printString = expected ] ]

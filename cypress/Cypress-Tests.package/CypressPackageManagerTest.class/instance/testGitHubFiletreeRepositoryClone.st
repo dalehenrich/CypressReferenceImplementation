@@ -7,7 +7,7 @@ testGitHubFiletreeRepositoryClone
 
   | repo packageNames expected |
   repo := CypressAbstractRepository
-    onUrl: 'gitfiletree://github.com/dalehenrich/sample:master/repository' asUrl
+    onUrl: (CypressUrl absoluteFromText: 'gitfiletree://github.com/dalehenrich/sample:master/repository')
     alias: ''.
   packageNames := repo packageNames.
   expected := #('BaseliineOfSample' 'Sample-Core' 'Sample-Tests').

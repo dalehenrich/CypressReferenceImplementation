@@ -42,6 +42,141 @@ true.
 ! Class Declarations
 
 doit
+(CypressFileUrl
+	subclass: 'CypressAbstractFileUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressCypressFileUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressFileTreeFormatFileUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressFileTreeReadOnlyFileUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressGitFileUrl'
+	instVarNames: #( projectPath projectBranchOrTag repositoryPath )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressGitFileUrl
+	subclass: 'CypressGitFileTreeUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressLaxFileUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressSmalltalkUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(CypressAbstractFileUrl
+	subclass: 'CypressTopazUrl'
+	instVarNames: #(  )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-PackageManagement';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
 (CypressObject
 	subclass: 'CypressAbstractPackageInformation'
 	instVarNames: #( name )
@@ -51,7 +186,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -66,7 +201,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -81,7 +216,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -96,7 +231,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -111,7 +246,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -126,7 +261,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'CypressPackageInformation documents potential and actual packages for the Cypress Package Manager. 
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+CypressPackageInformation documents potential and actual packages for the Cypress Package Manager. 
 
 Candidate package names come from class categories and from method categories beginning with an asterisk. Category names may contain more information than just the package name, such as logical subdivisions within a package or method categorization in addition to the package name. For example, a Package might be named X or Y-Z or whatever. Classes could be categorized as X, Y-Z, X-A, or Y-Z-A, and methods could be categorized as *X, *Y-Z, *X-A, *Y-Z-A, etc. (The various letters X, Y, Z, and A can represent almost any sequence of characters, in either uppercase, lowercase, or both. Package names are case-insensitive.)
 
@@ -153,153 +290,6 @@ true.
 %
 
 doit
-(FileUrl
-	subclass: 'CypressAbstractFileUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressFileTreeFormatFileUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressFileTreeReadOnlyFileUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressFileUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressGitFileUrl'
-	instVarNames: #( projectPath projectBranchOrTag repositoryPath )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: 'No class-specific documentation for CypressGitFileUrl, hierarchy is: 
-Object
-  Url( fragment)
-    FileUrl( host path isAbsolute)
-      CypressAbstractFileUrl
-        CypressGitFileUrl
-';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressGitFileUrl
-	subclass: 'CypressGitFileTreeUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: 'No class-specific documentation for CypressGitFileTreeUrl, hierarchy is: 
-Object
-  Url( fragment)
-    FileUrl( host path isAbsolute)
-      CypressAbstractFileUrl
-        CypressGitFileTreeUrl
-';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressLaxFileUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressSmalltalkUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(CypressAbstractFileUrl
-	subclass: 'CypressTopazUrl'
-	instVarNames: #(  )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-PackageManagement';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
 (Object
 	subclass: 'CypressAbstractRepository'
 	instVarNames: #( url properties readerClass writerClass )
@@ -309,7 +299,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -324,7 +314,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -339,7 +329,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'This is a "write-only" repository.
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+This is a "write-only" repository.
 It could be made readable, to be able to file-in Smalltalk scripts, but it''s not the same thing.
 ';
 		immediateInvariant.
@@ -356,7 +348,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'This is a "write-only" repository.
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+This is a "write-only" repository.
 It could be made readable, to be able to file-in Topaz scripts, but it''s not the same thing.
 ';
 		immediateInvariant.
@@ -373,7 +367,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -388,7 +382,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -403,7 +397,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -418,7 +412,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -433,7 +427,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -448,7 +442,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -463,7 +457,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'A CypressReference is an abstract superclass for various kinds of references to Cypress packages. Inspired by GoferReference in Pharo';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A CypressReference is an abstract superclass for various kinds of references to Cypress packages. Inspired by GoferReference in Pharo';
 		immediateInvariant.
 true.
 %
@@ -478,7 +474,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'A CypressPackageReference refers to a specific Cypress package.';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A CypressPackageReference refers to a specific Cypress package.';
 		immediateInvariant.
 true.
 %
@@ -493,7 +491,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'A CypressResolvedReference refers to a specific Cypress package in a repository. This class is the only one that can actually load a package, because it is the only one knowing where to find it.';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A CypressResolvedReference refers to a specific Cypress package in a repository. This class is the only one that can actually load a package, because it is the only one knowing where to find it.';
 		immediateInvariant.
 true.
 %
@@ -508,9 +508,464 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-PackageManagement';
-		comment: 'A CypressVersionReference refers to a specific version of a Monticello package.';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A CypressVersionReference refers to a specific version of a Monticello package.';
 		immediateInvariant.
 true.
+%
+
+! Class Implementation for CypressAbstractFileUrl
+
+! ------------------- Class methods for CypressAbstractFileUrl
+
+category: 'instance creation'
+classmethod: CypressAbstractFileUrl
+absoluteFromText: aString
+	"Return a URL from a string and handle
+	a String without a scheme as a FileUrl."
+
+	"Url absoluteFromText: 'http://chaos.resnet.gatech.edu:8000/docs/java/index.html?A%20query%20#part'" 
+	"Url absoluteFromText: 'msw://chaos.resnet.gatech.edu:9000/testbook?top'"
+	"Url absoluteFromText: 'telnet:chaos.resnet.gatech.edu'"
+	"Url absoluteFromText: 'file:/etc/passwd'"
+
+	| remainder index scheme fragment newUrl |
+	"trim surrounding whitespace"
+	remainder := aString trimSeparators.
+
+	"extract the fragment, if any"
+	index := remainder indexOf: $#.
+	index > 0 ifTrue: [
+		fragment := remainder copyFrom: index + 1 to: remainder size.
+		remainder := remainder copyFrom: 1 to: index - 1].
+
+	"choose class based on the scheme name, and let that class do the bulk of the parsing"
+	scheme := self schemeNameForString: remainder.
+	newUrl := (self urlClassForScheme: scheme) new privateInitializeFromText: remainder.
+	newUrl privateFragment: fragment.
+	^newUrl
+%
+
+category: 'parsing'
+classmethod: CypressAbstractFileUrl
+urlClassForScheme: scheme
+
+	scheme isNil ifTrue: [^CypressFileUrl].
+	^super urlClassForScheme: scheme
+%
+
+! ------------------- Instance methods for CypressAbstractFileUrl
+
+category: 'accessing'
+method: CypressAbstractFileUrl
+codeFormat
+
+	^self subclassResponsibility: #codeFormat.
+%
+
+category: 'private'
+method: CypressAbstractFileUrl
+fileUtils
+  ^ CypressFileUtilities current
+%
+
+category: 'testing'
+method: CypressAbstractFileUrl
+isStrict
+
+	^self subclassResponsibility: #isStrict.
+%
+
+category: 'accessing'
+method: CypressAbstractFileUrl
+repositoryClass
+
+	^CypressFileSystemRepository
+%
+
+! Class Implementation for CypressCypressFileUrl
+
+! ------------------- Class methods for CypressCypressFileUrl
+
+category: 'constants'
+classmethod: CypressCypressFileUrl
+schemeName
+
+	^'cypress'
+%
+
+! ------------------- Instance methods for CypressCypressFileUrl
+
+category: 'accessing'
+method: CypressCypressFileUrl
+codeFormat
+
+	^'Cypress'
+%
+
+category: 'testing'
+method: CypressCypressFileUrl
+isStrict
+
+	^true
+%
+
+! Class Implementation for CypressFileTreeFormatFileUrl
+
+! ------------------- Class methods for CypressFileTreeFormatFileUrl
+
+category: 'constants'
+classmethod: CypressFileTreeFormatFileUrl
+schemeName
+
+	^'cypressft'
+%
+
+! ------------------- Instance methods for CypressFileTreeFormatFileUrl
+
+category: 'accessing'
+method: CypressFileTreeFormatFileUrl
+codeFormat
+
+	^'FileTree'
+%
+
+category: 'testing'
+method: CypressFileTreeFormatFileUrl
+isStrict
+
+	^false
+%
+
+! Class Implementation for CypressFileTreeReadOnlyFileUrl
+
+! ------------------- Class methods for CypressFileTreeReadOnlyFileUrl
+
+category: 'constants'
+classmethod: CypressFileTreeReadOnlyFileUrl
+schemeName
+
+	^'cypressfiletree'
+%
+
+! ------------------- Instance methods for CypressFileTreeReadOnlyFileUrl
+
+category: 'accessing'
+method: CypressFileTreeReadOnlyFileUrl
+codeFormat
+
+	^'FileTree'
+%
+
+category: 'testing'
+method: CypressFileTreeReadOnlyFileUrl
+isStrict
+
+	^true
+%
+
+! Class Implementation for CypressGitFileUrl
+
+! ------------------- Class methods for CypressGitFileUrl
+
+category: 'constants'
+classmethod: CypressGitFileUrl
+schemeName
+  "A gitcypress url with a host is the target for a remote. All other parameters are optional.
+	Parameters are:
+		dir : the directory inside the repository where the target MC packages are.
+		branch : the git branch to fetch.
+		protocol: the user name part to add to the ssh Url, default to git, but can also be https (which implies read only access).
+		readOnly : is the repository read only? If present, reduce the history to a minimum (and change the GUI).
+	Alternative url syntax:
+		gitcypress://github.com/dalehenrich/filetree:pharo5.0_dev/repository
+	with:
+		host : github.com
+		project : dalehenrich/filetree
+		branch : pharo5.0_dev
+		dir : repository
+"
+
+  ^ 'gitcypress'
+%
+
+! ------------------- Instance methods for CypressGitFileUrl
+
+category: 'accessing'
+method: CypressGitFileUrl
+codeFormat
+
+	^'Cypress'
+%
+
+category: 'printing'
+method: CypressGitFileUrl
+httpsAccessString
+  ^ 'https://' , self host , self projectPath , '.git'
+%
+
+category: 'private-initialization'
+method: CypressGitFileUrl
+initializeFromPathString: aPathString
+  | projectDelim repoDelimIndex branchOrTagDelimIndex |
+  projectBranchOrTag := repositoryPath := nil.
+  projectDelim := aPathString indexOf: $/ startingAt: 2.
+  repoDelimIndex := aPathString indexOf: $/ startingAt: projectDelim + 1.
+  (branchOrTagDelimIndex := aPathString indexOf: $:) == 0
+    ifTrue: [ repoDelimIndex == 0
+        ifTrue: [ self projectPath: aPathString ]
+        ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: repoDelimIndex - 1).
+          self
+            repositoryPath:
+              (aPathString copyFrom: repoDelimIndex + 1 to: aPathString size) ] ]
+    ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: branchOrTagDelimIndex - 1).
+      repoDelimIndex == 0
+        ifTrue: [ projectBranchOrTag := aPathString
+            copyFrom: branchOrTagDelimIndex + 1
+            to: aPathString size ]
+        ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: branchOrTagDelimIndex - 1).
+          self parseBranchOrTagField: [ :pv :rp | projectBranchOrTag := pv.
+              self repositoryPath: rp ] pathString: aPathString
+          branchOrTagDelimIndex: branchOrTagDelimIndex ] ]
+%
+
+category: 'testing'
+method: CypressGitFileUrl
+isStrict
+
+	^true
+%
+
+category: 'private-initialization'
+method: CypressGitFileUrl
+parseBranchOrTagField: parseBlock pathString: aPathString branchOrTagDelimIndex: branchOrTagDelimIndex
+  | strm done escaped repoDelimIndex |
+  strm := WriteStream on: String new.
+  repoDelimIndex := branchOrTagDelimIndex + 1.
+  escaped := done := false.
+  [ done ] whileFalse: [ | char |
+      repoDelimIndex > aPathString size
+        ifTrue: [ done := true ]
+        ifFalse: [ char := aPathString at: repoDelimIndex.
+          char == $\
+            ifTrue: [ escaped
+                ifTrue: [ "$\ not legal in branch name ... literally ignored"
+                  escaped := false ]
+                ifFalse: [ escaped := true ] ]
+            ifFalse: [ char == $/
+                ifTrue: [ escaped
+                    ifFalse: [ done := true ] ].
+              done
+                ifFalse: [ strm nextPut: char ].
+              escaped := false ].
+          repoDelimIndex := repoDelimIndex + 1 ] ].
+  repoDelimIndex := repoDelimIndex - 1.
+  parseBlock
+    value: strm contents
+    value: (aPathString copyFrom: repoDelimIndex + 1 to: aPathString size)
+%
+
+category: 'printing'
+method: CypressGitFileUrl
+printOn: aStream
+
+	aStream nextPutAll: self schemeName , '://' , self host.
+	aStream
+		nextPutAll: self projectPath;
+		nextPut: $:.
+	self projectBranchOrTag do: 
+			[:char |
+			char = $/ ifTrue: [aStream nextPut: $\].
+			aStream nextPut: char].
+	aStream
+		nextPut: $/;
+		nextPutAll: self repositoryPath
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+projectBranchOrTag
+  ^ projectBranchOrTag ifNil: [ 'master' ]
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+projectBranchOrTag: anObject
+
+   projectBranchOrTag := anObject
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+projectPath
+
+   ^projectPath
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+projectPath: aString
+  aString last = self fileUtils pathNameDelimiter last
+    ifTrue: [ projectPath := aString copyFrom: 1 to: aString size - 1 ]
+    ifFalse: [ projectPath := aString ]
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+repositoryClass
+  ^ CypressFileSystemGitRepository
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+repositoryPath
+  ^ repositoryPath ifNil: [ '' ]
+%
+
+category: 'accessing'
+method: CypressGitFileUrl
+repositoryPath: aString
+  (aString size > 0
+    and: [ aString last = self fileUtils pathNameDelimiter last ])
+    ifTrue: [ repositoryPath := aString copyFrom: 1 to: aString size - 1 ]
+    ifFalse: [ repositoryPath := aString ]
+%
+
+! Class Implementation for CypressGitFileTreeUrl
+
+! ------------------- Class methods for CypressGitFileTreeUrl
+
+category: 'constants'
+classmethod: CypressGitFileTreeUrl
+schemeName
+  "A gitfiletree url with a host is the target for a remote. All other parameters are optional.
+	Parameters are:
+		dir : the directory inside the repository where the target MC packages are.
+		branch : the git branch to fetch.
+		protocol: the user name part to add to the ssh Url, default to git, but can also be https (which implies read only access).
+		readOnly : is the repository read only? If present, reduce the history to a minimum (and change the GUI).
+	Alternative url syntax:
+		gitfiletree://github.com/dalehenrich/filetree:pharo5.0_dev/repository
+	with:
+		host : github.com
+		project : dalehenrich/filetree
+		branch : pharo5.0_dev
+		dir : repository
+"
+
+  ^ 'gitfiletree'
+%
+
+! ------------------- Instance methods for CypressGitFileTreeUrl
+
+category: 'accessing'
+method: CypressGitFileTreeUrl
+codeFormat
+
+	^'FileTree'
+%
+
+category: 'testing'
+method: CypressGitFileTreeUrl
+isStrict
+
+	^false
+%
+
+! Class Implementation for CypressLaxFileUrl
+
+! ------------------- Class methods for CypressLaxFileUrl
+
+category: 'constants'
+classmethod: CypressLaxFileUrl
+schemeName
+
+	^'cypresslax'
+%
+
+! ------------------- Instance methods for CypressLaxFileUrl
+
+category: 'accessing'
+method: CypressLaxFileUrl
+codeFormat
+
+	^'Cypress'
+%
+
+category: 'testing'
+method: CypressLaxFileUrl
+isStrict
+
+	^false
+%
+
+! Class Implementation for CypressSmalltalkUrl
+
+! ------------------- Class methods for CypressSmalltalkUrl
+
+category: 'constants'
+classmethod: CypressSmalltalkUrl
+schemeName
+
+	^'chunk'
+%
+
+! ------------------- Instance methods for CypressSmalltalkUrl
+
+category: 'accessing'
+method: CypressSmalltalkUrl
+codeFormat
+
+	^'Chunk'
+%
+
+category: 'testing'
+method: CypressSmalltalkUrl
+isStrict
+
+	^true
+%
+
+category: 'accessing'
+method: CypressSmalltalkUrl
+repositoryClass
+
+	^CypressSmalltalkRepository
+%
+
+! Class Implementation for CypressTopazUrl
+
+! ------------------- Class methods for CypressTopazUrl
+
+category: 'constants'
+classmethod: CypressTopazUrl
+schemeName
+
+	^'topaz'
+%
+
+! ------------------- Instance methods for CypressTopazUrl
+
+category: 'accessing'
+method: CypressTopazUrl
+codeFormat
+
+	^'Topaz'
+%
+
+category: 'testing'
+method: CypressTopazUrl
+isStrict
+
+	^true
+%
+
+category: 'accessing'
+method: CypressTopazUrl
+repositoryClass
+
+	^CypressTopazRepository
 %
 
 ! Class Implementation for CypressAbstractPackageInformation
@@ -934,11 +1389,12 @@ category: 'accessing'
 method: CypressPackageInformation
 competingPackageNamesString
 
-	^String streamContents: 
-			[:stream |
-			self competingPackageNames
-				do: [:each | stream nextPutAll: each printString]
-				separatedBy: [stream nextPutAll: ', ']]
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	self competingPackageNames
+		do: [:each | stream nextPutAll: each printString]
+		separatedBy: [stream nextPutAll: ', '].
+	^stream contents
 %
 
 category: 'accessing'
@@ -1230,461 +1686,6 @@ method: CypressPackageInformation
 updateSavedDefinitions
 
 	self savedDefinitions: self readDefinitionsFromRepository
-%
-
-! Class Implementation for CypressAbstractFileUrl
-
-! ------------------- Class methods for CypressAbstractFileUrl
-
-category: 'instance creation'
-classmethod: CypressAbstractFileUrl
-absoluteFromText: aString
-	"Return a URL from a string and handle
-	a String without a scheme as a FileUrl."
-
-	"Url absoluteFromText: 'http://chaos.resnet.gatech.edu:8000/docs/java/index.html?A%20query%20#part'" 
-	"Url absoluteFromText: 'msw://chaos.resnet.gatech.edu:9000/testbook?top'"
-	"Url absoluteFromText: 'telnet:chaos.resnet.gatech.edu'"
-	"Url absoluteFromText: 'file:/etc/passwd'"
-
-	| remainder index scheme fragment newUrl |
-	"trim surrounding whitespace"
-	remainder := aString trimSeparators.
-
-	"extract the fragment, if any"
-	index := remainder indexOf: $#.
-	index > 0 ifTrue: [
-		fragment := remainder copyFrom: index + 1 to: remainder size.
-		remainder := remainder copyFrom: 1 to: index - 1].
-
-	"choose class based on the scheme name, and let that class do the bulk of the parsing"
-	scheme := self schemeNameForString: remainder.
-	newUrl := (self urlClassForScheme: scheme) new privateInitializeFromText: remainder.
-	newUrl privateFragment: fragment.
-	^newUrl
-%
-
-category: 'parsing'
-classmethod: CypressAbstractFileUrl
-urlClassForScheme: scheme
-
-	scheme isNil ifTrue: [^FileUrl].
-	^super urlClassForScheme: scheme
-%
-
-! ------------------- Instance methods for CypressAbstractFileUrl
-
-category: 'accessing'
-method: CypressAbstractFileUrl
-codeFormat
-
-	^self subclassResponsibility: #codeFormat.
-%
-
-category: 'private'
-method: CypressAbstractFileUrl
-fileUtils
-  ^ CypressFileUtilities current
-%
-
-category: 'testing'
-method: CypressAbstractFileUrl
-isStrict
-
-	^self subclassResponsibility: #isStrict.
-%
-
-category: 'accessing'
-method: CypressAbstractFileUrl
-repositoryClass
-
-	^CypressFileSystemRepository
-%
-
-! Class Implementation for CypressFileTreeFormatFileUrl
-
-! ------------------- Class methods for CypressFileTreeFormatFileUrl
-
-category: 'constants'
-classmethod: CypressFileTreeFormatFileUrl
-schemeName
-
-	^'cypressft'
-%
-
-! ------------------- Instance methods for CypressFileTreeFormatFileUrl
-
-category: 'accessing'
-method: CypressFileTreeFormatFileUrl
-codeFormat
-
-	^'FileTree'
-%
-
-category: 'testing'
-method: CypressFileTreeFormatFileUrl
-isStrict
-
-	^false
-%
-
-! Class Implementation for CypressFileTreeReadOnlyFileUrl
-
-! ------------------- Class methods for CypressFileTreeReadOnlyFileUrl
-
-category: 'constants'
-classmethod: CypressFileTreeReadOnlyFileUrl
-schemeName
-
-	^'cypressfiletree'
-%
-
-! ------------------- Instance methods for CypressFileTreeReadOnlyFileUrl
-
-category: 'accessing'
-method: CypressFileTreeReadOnlyFileUrl
-codeFormat
-
-	^'FileTree'
-%
-
-category: 'testing'
-method: CypressFileTreeReadOnlyFileUrl
-isStrict
-
-	^true
-%
-
-! Class Implementation for CypressFileUrl
-
-! ------------------- Class methods for CypressFileUrl
-
-category: 'constants'
-classmethod: CypressFileUrl
-schemeName
-
-	^'cypress'
-%
-
-! ------------------- Instance methods for CypressFileUrl
-
-category: 'accessing'
-method: CypressFileUrl
-codeFormat
-
-	^'Cypress'
-%
-
-category: 'testing'
-method: CypressFileUrl
-isStrict
-
-	^true
-%
-
-! Class Implementation for CypressGitFileUrl
-
-! ------------------- Class methods for CypressGitFileUrl
-
-category: 'constants'
-classmethod: CypressGitFileUrl
-schemeName
-  "A gitcypress url with a host is the target for a remote. All other parameters are optional.
-	Parameters are:
-		dir : the directory inside the repository where the target MC packages are.
-		branch : the git branch to fetch.
-		protocol: the user name part to add to the ssh Url, default to git, but can also be https (which implies read only access).
-		readOnly : is the repository read only? If present, reduce the history to a minimum (and change the GUI).
-	Alternative url syntax:
-		gitcypress://github.com/dalehenrich/filetree:pharo5.0_dev/repository
-	with:
-		host : github.com
-		project : dalehenrich/filetree
-		branch : pharo5.0_dev
-		dir : repository
-"
-
-  ^ 'gitcypress'
-%
-
-! ------------------- Instance methods for CypressGitFileUrl
-
-category: 'accessing'
-method: CypressGitFileUrl
-codeFormat
-
-	^'Cypress'
-%
-
-category: 'printing'
-method: CypressGitFileUrl
-httpsAccessString
-  ^ 'https://' , self host , self projectPath , '.git'
-%
-
-category: 'private-initialization'
-method: CypressGitFileUrl
-initializeFromPathString: aPathString
-  | projectDelim repoDelimIndex branchOrTagDelimIndex |
-  projectBranchOrTag := repositoryPath := nil.
-  projectDelim := aPathString indexOf: $/ startingAt: 2.
-  repoDelimIndex := aPathString indexOf: $/ startingAt: projectDelim + 1.
-  (branchOrTagDelimIndex := aPathString indexOf: $:) == 0
-    ifTrue: [ repoDelimIndex == 0
-        ifTrue: [ self projectPath: aPathString ]
-        ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: repoDelimIndex - 1).
-          self
-            repositoryPath:
-              (aPathString copyFrom: repoDelimIndex + 1 to: aPathString size) ] ]
-    ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: branchOrTagDelimIndex - 1).
-      repoDelimIndex == 0
-        ifTrue: [ projectBranchOrTag := aPathString
-            copyFrom: branchOrTagDelimIndex + 1
-            to: aPathString size ]
-        ifFalse: [ self projectPath: (aPathString copyFrom: 1 to: branchOrTagDelimIndex - 1).
-          self parseBranchOrTagField: [ :pv :rp | projectBranchOrTag := pv.
-              self repositoryPath: rp ] pathString: aPathString
-          branchOrTagDelimIndex: branchOrTagDelimIndex ] ]
-%
-
-category: 'testing'
-method: CypressGitFileUrl
-isStrict
-
-	^true
-%
-
-category: 'private-initialization'
-method: CypressGitFileUrl
-parseBranchOrTagField: parseBlock pathString: aPathString branchOrTagDelimIndex: branchOrTagDelimIndex
-  | strm done escaped repoDelimIndex |
-  strm := WriteStream on: String new.
-  repoDelimIndex := branchOrTagDelimIndex + 1.
-  escaped := done := false.
-  [ done ] whileFalse: [ | char |
-      repoDelimIndex > aPathString size
-        ifTrue: [ done := true ]
-        ifFalse: [ char := aPathString at: repoDelimIndex.
-          char == $\
-            ifTrue: [ escaped
-                ifTrue: [ "$\ not legal in branch name ... literally ignored"
-                  escaped := false ]
-                ifFalse: [ escaped := true ] ]
-            ifFalse: [ char == $/
-                ifTrue: [ escaped
-                    ifFalse: [ done := true ] ].
-              done
-                ifFalse: [ strm nextPut: char ].
-              escaped := false ].
-          repoDelimIndex := repoDelimIndex + 1 ] ].
-  repoDelimIndex := repoDelimIndex - 1.
-  parseBlock
-    value: strm contents
-    value: (aPathString copyFrom: repoDelimIndex + 1 to: aPathString size)
-%
-
-category: 'printing'
-method: CypressGitFileUrl
-printOn: aStream
-  | escapedBranchOrTag |
-  aStream nextPutAll: self schemeName , '://' , self host.
-  aStream
-    nextPutAll: self projectPath;
-    nextPut: $:.
-  escapedBranchOrTag := String
-    streamContents: [ :stream | self projectBranchOrTag do: [ :char | char = $/
-            ifTrue: [ stream nextPut: $\ ].
-          stream nextPut: char ] ].
-  aStream
-    nextPutAll: escapedBranchOrTag;
-    nextPut: $/;
-    nextPutAll: self repositoryPath;
-    yourself
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-projectBranchOrTag
-  ^ projectBranchOrTag ifNil: [ 'master' ]
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-projectBranchOrTag: anObject
-
-   projectBranchOrTag := anObject
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-projectPath
-
-   ^projectPath
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-projectPath: aString
-  aString last = self fileUtils pathNameDelimiter last
-    ifTrue: [ projectPath := aString copyFrom: 1 to: aString size - 1 ]
-    ifFalse: [ projectPath := aString ]
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-repositoryClass
-  ^ CypressFileSystemGitRepository
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-repositoryPath
-  ^ repositoryPath ifNil: [ '' ]
-%
-
-category: 'accessing'
-method: CypressGitFileUrl
-repositoryPath: aString
-  (aString size > 0
-    and: [ aString last = self fileUtils pathNameDelimiter last ])
-    ifTrue: [ repositoryPath := aString copyFrom: 1 to: aString size - 1 ]
-    ifFalse: [ repositoryPath := aString ]
-%
-
-! Class Implementation for CypressGitFileTreeUrl
-
-! ------------------- Class methods for CypressGitFileTreeUrl
-
-category: 'constants'
-classmethod: CypressGitFileTreeUrl
-schemeName
-  "A gitfiletree url with a host is the target for a remote. All other parameters are optional.
-	Parameters are:
-		dir : the directory inside the repository where the target MC packages are.
-		branch : the git branch to fetch.
-		protocol: the user name part to add to the ssh Url, default to git, but can also be https (which implies read only access).
-		readOnly : is the repository read only? If present, reduce the history to a minimum (and change the GUI).
-	Alternative url syntax:
-		gitfiletree://github.com/dalehenrich/filetree:pharo5.0_dev/repository
-	with:
-		host : github.com
-		project : dalehenrich/filetree
-		branch : pharo5.0_dev
-		dir : repository
-"
-
-  ^ 'gitfiletree'
-%
-
-! ------------------- Instance methods for CypressGitFileTreeUrl
-
-category: 'accessing'
-method: CypressGitFileTreeUrl
-codeFormat
-
-	^'FileTree'
-%
-
-category: 'testing'
-method: CypressGitFileTreeUrl
-isStrict
-
-	^false
-%
-
-! Class Implementation for CypressLaxFileUrl
-
-! ------------------- Class methods for CypressLaxFileUrl
-
-category: 'constants'
-classmethod: CypressLaxFileUrl
-schemeName
-
-	^'cypresslax'
-%
-
-! ------------------- Instance methods for CypressLaxFileUrl
-
-category: 'accessing'
-method: CypressLaxFileUrl
-codeFormat
-
-	^'Cypress'
-%
-
-category: 'testing'
-method: CypressLaxFileUrl
-isStrict
-
-	^false
-%
-
-! Class Implementation for CypressSmalltalkUrl
-
-! ------------------- Class methods for CypressSmalltalkUrl
-
-category: 'constants'
-classmethod: CypressSmalltalkUrl
-schemeName
-
-	^'chunk'
-%
-
-! ------------------- Instance methods for CypressSmalltalkUrl
-
-category: 'accessing'
-method: CypressSmalltalkUrl
-codeFormat
-
-	^'Chunk'
-%
-
-category: 'testing'
-method: CypressSmalltalkUrl
-isStrict
-
-	^true
-%
-
-category: 'accessing'
-method: CypressSmalltalkUrl
-repositoryClass
-
-	^CypressSmalltalkRepository
-%
-
-! Class Implementation for CypressTopazUrl
-
-! ------------------- Class methods for CypressTopazUrl
-
-category: 'constants'
-classmethod: CypressTopazUrl
-schemeName
-
-	^'topaz'
-%
-
-! ------------------- Instance methods for CypressTopazUrl
-
-category: 'accessing'
-method: CypressTopazUrl
-codeFormat
-
-	^'Topaz'
-%
-
-category: 'testing'
-method: CypressTopazUrl
-isStrict
-
-	^true
-%
-
-category: 'accessing'
-method: CypressTopazUrl
-repositoryClass
-
-	^CypressTopazRepository
 %
 
 ! Class Implementation for CypressAbstractRepository
@@ -2337,8 +2338,15 @@ category: 'accessing'
 method: CypressFileSystemRepository
 packageNames
 
-	^(self fileUtils directoryEntriesFrom: self directoryPath , '*', self packageExtension)
-		collect: [:each | (self fileUtils localNameFrom: each) copyWithoutSuffix: self packageExtension]
+	| extension extensionSize |
+	extension := self packageExtension.
+	extensionSize := extension size.
+	^(self fileUtils
+		directoryEntriesFrom: self directoryPath , '*' , extension) collect: 
+				[:each |
+				| localName |
+				localName := self fileUtils localNameFrom: each.
+				localName copyFrom: 1 to: localName size - extensionSize]
 %
 
 category: 'printing'
@@ -2437,7 +2445,7 @@ writePropertiesFile: fileName
 	self fileUtils
 		writeStreamFor: fileName
 		in: self directoryPath
-		do: [:fileStream | properties writeCypressJsonOn: fileStream]
+		do: [:fileStream | properties _writeCypressJsonOn: fileStream]
 %
 
 ! Class Implementation for CypressFileSystemGitRepository
@@ -2505,13 +2513,16 @@ performOnServer: commandLine status: statusBlock
 category: 'git commands'
 classmethod: CypressFileSystemGitRepository
 runGitCommand: argsArray in: gitRootPath
-  | command |
-  command := String
-    streamContents: [ :stream | stream nextPutAll: 'cd ' , gitRootPath , '; git '.
-      argsArray do: [ :arg | stream
-            space;
-            nextPutAll: arg ] ].
-  ^ self performOnServer: command
+
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	stream nextPutAll: 'cd ' , gitRootPath , '; git '.
+	argsArray do: 
+			[:arg |
+			stream
+				space;
+				nextPutAll: arg].
+	^self performOnServer: stream contents
 %
 
 ! ------------------- Instance methods for CypressFileSystemGitRepository
@@ -2669,20 +2680,24 @@ potentialPackageNames
 	| classCategories methodCategories |
 	classCategories := Set new.
 	methodCategories := Set new.
-	System myUserProfile symbolList allSatisfying: 
-			[:aClass |
-			aClass isBehavior and: 
-					[classCategories addAll: (self packageNamePermutationsFor: aClass category).
-					aClass categorysDo: 
-							[:cat :method |
-							cat first = $*
-								ifTrue: [methodCategories addAll: (self packageNamePermutationsFor: (cat copyFrom: 2 to: cat size))]].
-					false]].
+	System myUserProfile symbolList do: 
+			[:dict |
+			dict do: 
+					[:aClass |
+					aClass isBehavior and: 
+							[classCategories addAll: (self packageNamePermutationsFor: aClass category).
+							aClass categorysDo: 
+									[:cat :method |
+									cat first = $*
+										ifTrue: 
+											[methodCategories
+												addAll: (self packageNamePermutationsFor: (cat copyFrom: 2 to: cat size))]].
+							false]]].
 	^(Set new)
 		addAll: classCategories;
 		addAll: methodCategories;
-		remove: 'User Classes';
-		remove: 'Kernel';
+		removeIfPresent: 'User Classes';
+		removeIfPresent: 'Kernel';
 		sortAscending
 %
 
@@ -2744,10 +2759,11 @@ initializeConflictingPackageNames
 	conflictingPackages := Dictionary new.
 	packageInformationList do: 
 			[:each |
-			conflictingPackages
-				at: each
-				put: (knownPackages keys
-						select: [:knownName | knownName ~= each name and: [knownName beginsWith: each name , '-']])].
+			conflictingPackages at: each
+				put: (knownPackages keys select: 
+							[:knownName |
+							knownName ~= each name
+								and: [(knownName indexOfSubCollection: each name , '-') = 1]])].
 	conflictingPackages := conflictingPackages reject: [:each | each isEmpty].
 	conflictingPackages
 		keysAndValuesDo: [:package :conflicts | package beConflictedWith: conflicts]
@@ -2795,10 +2811,11 @@ initializeQualifiedPackageNames
 	qualifiedPackages := Dictionary new.
 	packageInformationList do: 
 			[:each |
-			qualifiedPackages
-				at: each
-				put: (knownPackages keys
-						select: [:knownName | knownName ~= each name and: [each name beginsWith: knownName , '-']])].
+			qualifiedPackages at: each
+				put: (knownPackages keys select: 
+							[:knownName |
+							knownName ~= each name
+								and: [(each name indexOfSubCollection: knownName , '-') = 1]])].
 	qualifiedPackages := qualifiedPackages reject: [:each | each isEmpty].
 	qualifiedPackages
 		keysAndValuesDo: [:package :baseNames | package beQualifiedNameOf: baseNames]
@@ -3072,20 +3089,24 @@ potentialPackageNames
 	| classCategories methodCategories |
 	classCategories := Set new.
 	methodCategories := Set new.
-	System myUserProfile symbolList allSatisfying: 
-			[:aClass |
-			aClass isBehavior and: 
-					[classCategories addAll: (self packageNamePermutationsFor: aClass category).
-					aClass categorysDo: 
-							[:cat :method |
-							cat first = $*
-								ifTrue: [methodCategories addAll: (self packageNamePermutationsFor: (cat copyFrom: 2 to: cat size))]].
-					false]].
+	System myUserProfile symbolList do: 
+			[:dict |
+			dict do: 
+					[:aClass |
+					aClass isBehavior and: 
+							[classCategories addAll: (self packageNamePermutationsFor: aClass category).
+							aClass categorysDo: 
+									[:cat :method |
+									cat first = $*
+										ifTrue: 
+											[methodCategories
+												addAll: (self packageNamePermutationsFor: (cat copyFrom: 2 to: cat size))]].
+							false]]].
 	^(Set new)
 		addAll: classCategories;
 		addAll: methodCategories;
-		remove: 'User Classes';
-		remove: 'Kernel';
+		removeIfPresent: 'User Classes';
+		removeIfPresent: 'Kernel';
 		sortAscending
 %
 
@@ -3202,12 +3223,11 @@ category: 'Updating'
 method: CypressPackageManager2
 createRepositoryNamed: aName under: aDirectory alias: aString schema: schemaName
 
-	^CypressFileSystemRepository
-		createOn: (schemaName
-				, (CypressFileUtilities current
-					directoryFromPath: aName
-						relativeTo: aDirectory)
-				, '/') asUrl
+	^CypressFileSystemRepository createOn: (CypressUrl
+				absoluteFromText: schemaName
+						, (CypressFileUtilities current directoryFromPath: aName
+								relativeTo: aDirectory)
+							, '/')
 		alias: aString
 %
 
@@ -3217,8 +3237,8 @@ findPackagesConflictingWith: aKnownPackageInformation
 
 	^self packageInformationList select: 
 			[:each |
-			aKnownPackageInformation name ~= each name
-				and: [aKnownPackageInformation name beginsWith: each name , '-']]
+			aKnownPackageInformation name ~= each name and: 
+					[(aKnownPackageInformation name indexOfSubCollection: each name , '-') = 1]]
 %
 
 category: 'Accessing - private'
@@ -3227,8 +3247,8 @@ findPackagesEclipsedBy: aKnownPackageInformation
 
 	^self packageInformationList select: 
 			[:each |
-			aKnownPackageInformation name ~= each name
-				and: [each name beginsWith: aKnownPackageInformation name , '-']]
+			aKnownPackageInformation name ~= each name and: 
+					[(each name indexOfSubCollection: aKnownPackageInformation name , '-') = 1]]
 %
 
 category: 'Initializing - private'
@@ -3819,21 +3839,72 @@ packageName
 category: 'initialization'
 method: CypressVersionReference
 parseName: aString
-	| basicName |
-	basicName := (aString isEmpty or: [aString last isDigit or: [(aString includes: $() not]])
-		ifTrue: [ aString ]
-		ifFalse: [ (aString copyUpToLast: $.) copyUpTo: $( ].
-	package := basicName copyUpToLast: $-.
-	(package includes: $.)
-		ifFalse: [ branch := '' ]
-		ifTrue: [
-			branch := package copyAfter: $..
-			package := package copyUpTo: $. ].
-	author := (basicName copyAfterLast: $-) copyUpToLast: $..
-	versionNumber := (basicName copyAfterLast: $-) copyAfterLast: $..
-	(versionNumber notEmpty and: [ versionNumber allSatisfy: [ :each | each isDigit ] ])
-		ifTrue: [ versionNumber := versionNumber asInteger ]
-		ifFalse: [ versionNumber := 0 ]
+
+	| basicName lastDotIndex packageDotIndex lastMinusIndex |
+	basicName := (aString isEmpty
+				or: [aString last isDigit or: [(aString includes: $() not]])
+					ifTrue: [aString]
+					ifFalse: 
+						["up to last (, but not if there's a . after it"
+						| parenIndex dotIndex |
+						parenIndex := 0.
+						dotIndex := 0.
+						aString size to: 1
+							by: -1
+							do: 
+								[:i |
+								| c |
+								c := aString at: i.
+								(c = $. and: [dotIndex = 0])
+									ifTrue: 
+										[dotIndex := i.
+										parenIndex := 0].
+								(c = $( and: [parenIndex = 0]) ifTrue: [parenIndex := i]].
+						aString copyFrom: 1 to: parenIndex - 1].
+	lastMinusIndex := 0.
+	lastDotIndex := 0.
+	basicName size to: 1
+		by: -1
+		do: 
+			[:i |
+			| c |
+			c := basicName at: i.
+			(c = $- and: [lastMinusIndex = 0]) ifTrue: [lastMinusIndex := i].
+			(c = $. and: [lastDotIndex = 0]) ifTrue: [lastDotIndex := i]].
+	lastMinusIndex = 0 ifTrue: [lastMinusIndex := basicName size + 1].
+	package := basicName copyFrom: 1 to: lastMinusIndex - 1.
+	branch := ''.
+	packageDotIndex := package indexOf: $..
+	packageDotIndex > 0
+		ifTrue: 
+			[branch := package copyFrom: packageDotIndex + 1 to: package size.
+			package := package copyFrom: 1 to: packageDotIndex - 1].
+	author := lastMinusIndex = 0
+				ifTrue: ['']
+				ifFalse: 
+					[lastDotIndex < lastMinusIndex ifTrue: [lastDotIndex := basicName size + 1].
+					basicName copyFrom: lastMinusIndex + 1 to: lastDotIndex - 1].
+
+	"if basicName is of the form anything-something.number, you'll get number.
+If it contains no hyphen, or no period after the last hyphen, you get nothing"
+	versionNumber := (basicName indexOf: $-) = 0
+				ifTrue: [0]
+				ifFalse: 
+					[| index lastIndex char |
+					index := lastIndex := basicName size.
+					char := basicName at: index.
+					[char = $. | (char = $-)] whileFalse: 
+							[index := index - 1.
+							char := basicName at: index].
+					char = $-
+						ifTrue: [0	"No period after last hyphen."]
+						ifFalse: 
+							[| numberString |
+							numberString := basicName copyFrom: index + 1 to: lastIndex.
+							(numberString notEmpty
+								and: [numberString allSatisfy: [:each | each isDigit]])
+									ifTrue: [numberString asInteger]
+									ifFalse: [0]]]
 %
 
 category: 'printing'
@@ -3854,6 +3925,123 @@ versionNumber
 %
 
 ! Class Extensions
+
+! Class Extension for Array
+
+! ------------------- Instance methods for Array
+
+category: '*Cypress-PackageManagement'
+method: Array
+_writeCypressJsonOn: aStream indent: startIndent
+	"Private method which may be removed in a future GemStone version."
+
+	| indent |
+	aStream
+		nextPutAll: '[';
+		lf.
+	indent := startIndent + 1.
+	1 to: self size
+		do: 
+			[:index |
+			| item |
+			item := self at: index.
+			indent timesRepeat: [aStream tab].
+			item _writeCypressJsonOn: aStream indent: indent.
+			index < self size
+				ifTrue: 
+					[aStream
+						nextPutAll: ',';
+						lf]].
+	self size = 0 ifTrue: [indent timesRepeat: [aStream tab]].
+	aStream nextPutAll: ' ]'
+%
+
+! Class Extension for Boolean
+
+! ------------------- Instance methods for Boolean
+
+category: '*Cypress-PackageManagement'
+method: Boolean
+_writeCypressJsonOn: aStream indent: startIndent
+	"Private method which may be removed in a future GemStone version."
+
+	aStream nextPutAll: self printString
+%
+
+! Class Extension for Dictionary
+
+! ------------------- Instance methods for Dictionary
+
+category: '*Cypress-PackageManagement'
+method: Dictionary
+_writeCypressJsonOn: aStream indent: startIndent
+	"Private method which may be removed in a future GemStone version."
+
+	| indent cnt |
+	indent := startIndent.
+	aStream
+		nextPutAll: '{';
+		lf.
+	cnt := 0.
+	indent := indent + 1.
+	self keys asSortedCollection do: 
+			[:key |
+			| value |
+			value := self at: key.
+			cnt := cnt + 1.
+			indent timesRepeat: [aStream tab].
+			key _writeCypressJsonOn: aStream indent: indent.
+			aStream nextPutAll: ' : '.
+			value _writeCypressJsonOn: aStream indent: indent.
+			cnt < self size
+				ifTrue: 
+					[aStream
+						nextPutAll: ',';
+						lf]].
+	self size = 0 ifTrue: [indent timesRepeat: [aStream tab]].
+	aStream nextPutAll: ' }'
+%
+
+! Class Extension for Number
+
+! ------------------- Instance methods for Number
+
+category: '*Cypress-PackageManagement'
+method: Number
+_writeCypressJsonOn: aStream indent: startIndent
+	"Private method which may be removed in a future GemStone version."
+
+	aStream nextPutAll: self printString
+%
+
+! Class Extension for Object
+
+! ------------------- Instance methods for Object
+
+category: '*Cypress-PackageManagement'
+method: Object
+_writeCypressJsonOn: fileStream
+	"Private method which may be removed in a future GemStone version."
+
+	self _writeCypressJsonOn: fileStream indent: 0
+%
+
+! Class Extension for String
+
+! ------------------- Instance methods for String
+
+category: '*Cypress-PackageManagement'
+method: String
+_writeCypressJsonOn: aStream indent: startIndent
+	"Private method which may be removed in a future GemStone version."
+
+	aStream nextPutAll: '"'.
+	CypressUrl
+		writeWithHttpEscapes: (CypressObject normalizeLineEndingsOf: self)
+				encodeAsUTF8
+		on: aStream.
+	aStream nextPutAll: '"'
+%
 
 ! Class initializers 
 

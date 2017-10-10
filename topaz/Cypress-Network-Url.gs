@@ -1,12 +1,12 @@
-! Package: Network-Url
+! Package: Cypress-Network-Url
 
 
-! Remove existing behavior from package Network-Url
+! Remove existing behavior from package Cypress-Network-Url
 !!!! This can be cleaned up when some package functionality is moved to the base system.
 
 doit
 | packageName |
-packageName := 'Network-Url'.
+packageName := 'Cypress-Network-Url'.
 System myUserProfile symbolList do: [:symDict |
 	symDict do: [:possibleClass |
 			| toRemove |
@@ -42,62 +42,35 @@ true.
 ! Class Declarations
 
 doit
-(Error
-	subclass: 'InvalidDirectoryError'
-	instVarNames: #( pathName )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Network-Url';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
 (Object
-	subclass: 'Authorizer'
-	instVarNames: #( users realm )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Network-Url';
-		comment: 'The Authorizer does user authorization checking. Each instance of authorizer keeps track of the realm that it is authorizing for, and the table of authorized users. An authorizer can be asked to return the user name/symbol associated with a userID (which concatenates the username and password from the HTTP request) with the user: method.
-';
-		immediateInvariant.
-true.
-%
-
-doit
-(Object
-	subclass: 'Url'
+	subclass: 'CypressUrl'
 	instVarNames: #( fragment )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'A Uniform Resource Locator.  It specifies the location of a document on the Internet.  The base class is abstract; child classes break different types of URLs down in ways appropriate for that type.';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A Uniform Resource Locator.  It specifies the location of a document on the Internet.  The base class is abstract; child classes break different types of URLs down in ways appropriate for that type.';
 		immediateInvariant.
 true.
 %
 
 doit
-(Url
-	subclass: 'FileUrl'
+(CypressUrl
+	subclass: 'CypressFileUrl'
 	instVarNames: #( host path isAbsolute )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'This class models a file URL according to (somewhat) RFC1738, see http://www.w3.org/Addressing/rfc1738.txt
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+This class models a file URL according to (somewhat) RFC1738, see http://www.w3.org/Addressing/rfc1738.txt
 
 Here is the relevant part of the RFC:
 
@@ -150,91 +123,101 @@ true.
 %
 
 doit
-(Url
-	subclass: 'GenericUrl'
+(CypressUrl
+	subclass: 'CypressGenericUrl'
 	instVarNames: #( schemeName locator )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'a URL type that can''t be broken down in any systematic way.  For example, mailto: and telnet: URLs.  The part after the scheme name is stored available via the #locator message.';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+a URL type that can''t be broken down in any systematic way.  For example, mailto: and telnet: URLs.  The part after the scheme name is stored available via the #locator message.';
 		immediateInvariant.
 true.
 %
 
 doit
-(GenericUrl
-	subclass: 'BrowserUrl'
+(CypressGenericUrl
+	subclass: 'CypressBrowserUrl'
 	instVarNames: #(  )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'URLs that instruct a browser to do something.';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+URLs that instruct a browser to do something.';
 		immediateInvariant.
 true.
 %
 
 doit
-(GenericUrl
-	subclass: 'MailtoUrl'
+(CypressGenericUrl
+	subclass: 'CypressMailtoUrl'
 	instVarNames: #(  )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'a URL specifying a mailing address; activating it triggers a mail-sender to start up, if one is present.';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+a URL specifying a mailing address; activating it triggers a mail-sender to start up, if one is present.';
 		immediateInvariant.
 true.
 %
 
 doit
-(Url
-	subclass: 'HierarchicalUrl'
+(CypressUrl
+	subclass: 'CypressHierarchicalUrl'
 	instVarNames: #( schemeName authority path query port username password )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'A URL which has a hierarchical encoding.  For instance, http and ftp URLs are hierarchical.';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A URL which has a hierarchical encoding.  For instance, http and ftp URLs are hierarchical.';
 		immediateInvariant.
 true.
 %
 
 doit
-(HierarchicalUrl
-	subclass: 'FtpUrl'
+(CypressHierarchicalUrl
+	subclass: 'CypressFtpUrl'
 	instVarNames: #(  )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: '';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
 
 doit
-(HierarchicalUrl
-	subclass: 'HttpUrl'
+(CypressHierarchicalUrl
+	subclass: 'CypressHttpUrl'
 	instVarNames: #( realm )
 	classVars: #( Passwords )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: 'A URL that can be accessed via the Hypertext Transfer Protocol (HTTP), ie, a standard Web URL
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+A URL that can be accessed via the Hypertext Transfer Protocol (HTTP), ie, a standard Web URL
 
 realm = the name of the security realm that has been discovered for this URL.   Look it up in Passwords.
 
@@ -248,162 +231,46 @@ true.
 %
 
 doit
-(HttpUrl
-	subclass: 'HttpsUrl'
+(CypressHttpUrl
+	subclass: 'CypressHttpsUrl'
 	instVarNames: #(  )
 	classVars: #(  )
 	classInstVars: #(  )
 	poolDictionaries: #()
 	inDictionary: Globals
 	options: #())
-		category: 'Network-Url';
-		comment: '';
+		category: 'Cypress-Network-Url';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
 
-! Class Implementation for InvalidDirectoryError
+! Class Implementation for CypressUrl
 
-! ------------------- Class methods for InvalidDirectoryError
-
-category: 'exceptioninstantiator'
-classmethod: InvalidDirectoryError
-pathName: badPathName
-	^self new pathName: badPathName
-%
-
-! ------------------- Instance methods for InvalidDirectoryError
-
-category: 'exceptiondescription'
-method: InvalidDirectoryError
-defaultAction
-
-	 ^#()
-%
-
-category: 'accessing'
-method: InvalidDirectoryError
-pathName
-	^pathName
-%
-
-category: 'accessing'
-method: InvalidDirectoryError
-pathName: badPathName
-	pathName := badPathName
-%
-
-! Class Implementation for Authorizer
-
-! ------------------- Class methods for Authorizer
-
-category: 'as yet unclassified'
-classmethod: Authorizer
-unauthorizedFor: realm
-  ^ 'HTTP/1.0 401 Unauthorized' , self crlf
-    , 'WWW-Authenticate: Basic realm="Pharo/' , realm , '"'
-    ,
-      (String
-        with: Character cr
-        with: Character lf
-        with: Character cr
-        with: Character lf)
-    , '<html><title>Unauthorized</title><body><h2>Unauthorized for ' , realm
-    , '</h2></body></html>'
-%
-
-! ------------------- Instance methods for Authorizer
-
-category: 'authentication'
-method: Authorizer
-encode: nameString password: pwdString
-	"Encode per RFC1421 of the username:password combination."
-
-	| clear code clearSize idx map |
-	clear := (nameString, ':', pwdString) asByteArray.
-	clearSize := clear size.
-	[ clear size \\ 3 ~= 0 ] whileTrue: [ clear := clear, #(0) ].
-	idx := 1.
-	map := 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.
-	code := WriteStreamPortable on: String new.
-	[ idx < clear size ] whileTrue: [ code 
-		nextPut: (map at: (clear at: idx) // 4 + 1);
-		nextPut: (map at: (clear at: idx) \\ 4 * 16 + ((clear at: idx + 1) // 16) + 1);
-   		nextPut: (map at: (clear at: idx + 1) \\ 16 * 4 + ((clear at: idx + 2) // 64) + 1);
-   		nextPut: (map at: (clear at: idx + 2) \\ 64 + 1).
-		idx := idx + 3 ].
-	code := code contents.
-	idx := code size.
-	clear size - clearSize timesRepeat: [ code at: idx put: $=. idx := idx - 1].
-	^code
-%
-
-category: 'authentication'
-method: Authorizer
-mapFrom: aKey to: aPerson
-	"Establish a mapping from a RFC 1421 key to a user."
-
-	users isNil ifTrue: [ users := Dictionary new ].
-	aPerson
-	 isNil ifTrue: [ users removeKey: aKey ]
-	 ifFalse: [
-		users removeKey: (users keyAtValue: aPerson ifAbsent: []) ifAbsent: [].
-		users at: aKey put: aPerson ]
-%
-
-category: 'authentication'
-method: Authorizer
-mapName: nameString password: pwdString to: aPerson
-	"Insert/remove the encoding per RFC1421 of the username:password combination into/from the UserMap.  DO NOT call this directly, use mapName:password:to: in your ServerAction class.  Only it knows how to record the change on the disk!"
-
-	self mapFrom: (self encode: nameString password: pwdString) to: aPerson
-%
-
-category: 'realms'
-method: Authorizer
-realm
-	^realm
-%
-
-category: 'realms'
-method: Authorizer
-realm: aString
-	realm := aString
-%
-
-category: 'authentication'
-method: Authorizer
-user: userId
-	"Return the requesting user."
-	^users at: userId ifAbsent: [ self error: (self class unauthorizedFor: realm) ]
-%
-
-! Class Implementation for Url
-
-! ------------------- Class methods for Url
+! ------------------- Class methods for CypressUrl
 
 category: 'instance creation'
-classmethod: Url
+classmethod: CypressUrl
 absoluteFromFileNameOrUrlString: aString
 	"Return a URL from and handle Strings without schemes
 	as local relative FileUrls instead of defaulting to a HttpUrl
 	as absoluteFromText: does."
 
-	^(Url schemeNameForString: aString)
-		ifNil: [aString asUrlRelativeTo: FileUrl workingDirectory]
-		ifNotNil: [Url absoluteFromText: aString]
+	^(CypressUrl schemeNameForString: aString)
+		ifNil: [CypressFileUrl workingDirectory newFromRelativeText: aString]
+		ifNotNil: [CypressUrl absoluteFromText: aString]
 %
 
 category: 'instance creation'
-classmethod: Url
+classmethod: CypressUrl
 absoluteFromText: aString
 	"Return a URL from a string and handle
 	a String without a scheme as a HttpUrl."
 
-	"Url absoluteFromText: 'http://chaos.resnet.gatech.edu:8000/docs/java/index.html?A%20query%20#part'" 
-	"Url absoluteFromText: 'msw://chaos.resnet.gatech.edu:9000/testbook?top'"
-	"Url absoluteFromText: 'telnet:chaos.resnet.gatech.edu'"
-	"Url absoluteFromText: 'file:/etc/passwd'"
+	"CypressUrl absoluteFromText: 'http://chaos.resnet.gatech.edu:8000/docs/java/index.html?A%20query%20#part'" 
+	"CypressUrl absoluteFromText: 'msw://chaos.resnet.gatech.edu:9000/testbook?top'"
+	"CypressUrl absoluteFromText: 'telnet:chaos.resnet.gatech.edu'"
+	"CypressUrl absoluteFromText: 'file:/etc/passwd'"
 
 	| remainder index scheme fragment newUrl |
 	"trim surrounding whitespace"
@@ -423,15 +290,33 @@ absoluteFromText: aString
 %
 
 category: 'parsing'
-classmethod: Url
+classmethod: CypressUrl
 combine: baseURL withRelative: relURL 
 	"Take two URL as string form, combine them and return the corresponding URL in string form"
 
 	^((self absoluteFromText: baseURL) newFromRelativeText: relURL) asString
 %
 
+category: 'instance creation'
+classmethod: CypressUrl
+for: aString
+	"Return a URL from a string and handle
+	a String without a scheme as a HttpUrl."
+
+	^self absoluteFromText: aString
+%
+
+category: 'encoding'
+classmethod: CypressUrl
+isCharacterSafeForHttp: aChar
+	"Answer whether a character is 'safe', or needs to be escaped when used, eg, in a URL."
+
+	^aChar codePoint < 128
+		and: [aChar isAlphaNumeric or: ['.-_' includes: aChar]]
+%
+
 category: 'constants'
-classmethod: Url
+classmethod: CypressUrl
 schemeName
 	"When searching for a class to handle a particular scheme, make sure that Url classes never match by default. This is so that abstract Url classes e.g. HierarchicalUrl can be iterated over, but will not be selected"
 
@@ -439,7 +324,7 @@ schemeName
 %
 
 category: 'parsing'
-classmethod: Url
+classmethod: CypressUrl
 schemeNameForString: aString
 	"Get the scheme name from a string, or return nil if it's not specified. 
 	Used in internal parsing routines - an outsider may as well use asUrl. 
@@ -457,75 +342,124 @@ schemeNameForString: aString
 %
 
 category: 'parsing'
-classmethod: Url
+classmethod: CypressUrl
 urlClassForScheme: scheme
 
-	^ self allSubclasses
-				detect: [ :urlClass | urlClass schemeName = scheme ]
-				ifNone: [ GenericUrl ].
+	^self allSubclasses detect: [:urlClass | urlClass schemeName = scheme]
+		ifNone: [CypressGenericUrl]
 %
 
-! ------------------- Instance methods for Url
+category: 'encoding'
+classmethod: CypressUrl
+writeWithHttpEscapes: aCollection on: aStream
+	"Write the given string or Utf8 on the stream with 'dangerous' characters 
+	escaped to their %XX form, for use in HTTP transactions.
+	Note that Utf8s containing code points over 128 will not work properly here."
+
+	aCollection do: 
+			[:each |
+			| char |
+			char := each asCharacter.
+			(self isCharacterSafeForHttp: char)
+				ifTrue: [aStream nextPut: char]
+				ifFalse: 
+					[| int |
+					aStream nextPut: $%.
+					int := each asInteger.
+					int // 16 printOn: aStream base: 16 showRadix: false.
+					int \\ 16 printOn: aStream base: 16 showRadix: false]]
+%
+
+! ------------------- Instance methods for CypressUrl
 
 category: 'downloading'
-method: Url
+method: CypressUrl
 activate
 	"spawn an external handler for this URL"
 	
 %
 
 category: 'converting'
-method: Url
+method: CypressUrl
 asString
 
 	^self printString
 %
 
 category: 'converting'
-method: Url
+method: CypressUrl
 asURI
 	^self asString asURI
 %
 
 category: 'converting'
-method: Url
+method: CypressUrl
 asUrl
 	^self
 %
 
 category: 'converting'
-method: Url
+method: CypressUrl
 asUrlRelativeTo: aUrl
 	^self
 %
 
 category: 'accessing'
-method: Url
+method: CypressUrl
 authority
 	^''
 %
 
+category: 'encoding'
+method: CypressUrl
+decodeHttpEscapesOf: aString
+	"decode string including %XX form
+	 (adapted from Pharo 2.0)"
+
+	| unescaped pos sourceSize |
+	unescaped := ReadWriteStreamPortable on: String new.
+	pos := 1.
+	sourceSize := aString size.
+	[pos > sourceSize] whileFalse: 
+			[| char |
+			char := aString at: pos.
+			(char = $% and: [pos + 2 <= sourceSize])
+				ifTrue: 
+					[| asciiVal |
+					asciiVal := ((aString at: pos + 1) asUppercase digitValueInRadix: 16) * 16
+								+ ((aString at: pos + 2) asUppercase digitValueInRadix: 16).
+					asciiVal > 255 ifTrue: [^aString].
+					unescaped nextPut: (Character withValue: asciiVal).
+					pos := pos + 3]
+				ifFalse: 
+					[char = $+
+						ifTrue: [unescaped nextPut: Character space]
+						ifFalse: [unescaped nextPut: char].
+					pos := pos + 1]].
+	^unescaped contents
+%
+
 category: 'converting'
-method: Url
+method: CypressUrl
 downloadUrl
 	^self asString
 %
 
 category: 'fragment'
-method: Url
+method: CypressUrl
 fragment
 	^fragment
 %
 
 category: 'downloading'
-method: Url
+method: CypressUrl
 hasContents
 	"whether this URL can download contents to be displayed; if not, it fundamentally requires an outside application to deal with it.  For example, mailto: and telnet: urls"
 	^false
 %
 
 category: 'parsing'
-method: Url
+method: CypressUrl
 newFromRelativeText: aString
 	"return a URL relative to the current one, given by aString.  For instance, if self is 'http://host/dir/file', and aString is '/dir2/file2', then the return will be a Url for 'http://host/dir2/file2'"
 
@@ -534,10 +468,10 @@ newFromRelativeText: aString
 	| newSchemeName remainder fragmentStart newFragment newUrl bare |
 
 	bare := aString trimSeparators.
-	newSchemeName := Url schemeNameForString: bare.
+	newSchemeName := CypressUrl schemeNameForString: bare.
 	(newSchemeName notNil and: [ newSchemeName ~= self schemeName ]) ifTrue: [
 		"different scheme -- start from scratch"
-		^Url absoluteFromText: aString ].
+		^CypressUrl absoluteFromText: aString ].
 
 	remainder := bare.
 
@@ -563,27 +497,27 @@ newFromRelativeText: aString
 %
 
 category: 'printing'
-method: Url
+method: CypressUrl
 printOn: aStream
 
 	^self subclassResponsibility: #printOn:
 %
 
 category: 'fragment'
-method: Url
+method: CypressUrl
 privateFragment: aString
 	fragment := aString
 %
 
 category: 'parsing'
-method: Url
+method: CypressUrl
 privateInitializeFromText: aString
 
 	^self subclassResponsibility: #privateInitializeFromText:
 %
 
 category: 'parsing'
-method: Url
+method: CypressUrl
 privateInitializeFromText: aString relativeTo: aUrl
 	"initialize from the given string, as a relative URL.  aString will have had the scheme name removed, if it was present to begin with.  If it was, then the scheme name was the same as the receiver's scheme name"
 
@@ -592,7 +526,7 @@ privateInitializeFromText: aString relativeTo: aUrl
 %
 
 category: 'classification'
-method: Url
+method: CypressUrl
 scheme
 	"return a string with the scheme of this URL.  For instance, HTTP"
 
@@ -600,7 +534,7 @@ scheme
 %
 
 category: 'classification'
-method: Url
+method: CypressUrl
 schemeName
 	"return a lowercase string with the scheme of this URL.  For instance, 'http'"
 
@@ -608,25 +542,32 @@ schemeName
 %
 
 category: 'fragment'
-method: Url
+method: CypressUrl
 withFragment: newFragment
 	"return a URL which is the same except that it has a different fragment"
 	^self copy privateFragment: newFragment; yourself
 %
 
 category: 'fragment'
-method: Url
+method: CypressUrl
 withoutFragment
 	"return a URL which is identical to the receiver except that it has no fragment associated with it"
 	^self withFragment: nil
 %
 
-! Class Implementation for FileUrl
+category: 'encoding'
+method: CypressUrl
+writeWithHttpEscapes: aCollection on: aStream
 
-! ------------------- Class methods for FileUrl
+	self class writeWithHttpEscapes: aCollection on: aStream
+%
+
+! Class Implementation for CypressFileUrl
+
+! ------------------- Class methods for CypressFileUrl
 
 category: 'instance creation'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 absoluteFromText: aString
 	"Method that can be called explicitly to create a FileUrl."
 
@@ -634,7 +575,7 @@ absoluteFromText: aString
 %
 
 category: 'instance creation'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 host: aHost pathParts: aCollectionOfPathParts isAbsolute: aBoolean
 	"Create a FileUrl."
 
@@ -642,7 +583,7 @@ host: aHost pathParts: aCollectionOfPathParts isAbsolute: aBoolean
 %
 
 category: 'instance creation'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 pathParts: aCollectionOfPathParts
 	"Create a FileUrl."
 
@@ -650,7 +591,7 @@ pathParts: aCollectionOfPathParts
 %
 
 category: 'instance creation'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 pathParts: aCollectionOfPathParts isAbsolute: aBoolean
 	"Create a FileUrl."
 
@@ -658,22 +599,22 @@ pathParts: aCollectionOfPathParts isAbsolute: aBoolean
 %
 
 category: 'constants'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 schemeName
 	^'file'
 %
 
 category: 'instance creation'
-classmethod: FileUrl
+classmethod: CypressFileUrl
 workingDirectory
 
 	^self absoluteFromText: CypressFileUtilities current workingDirectory
 %
 
-! ------------------- Instance methods for FileUrl
+! ------------------- Instance methods for CypressFileUrl
 
 category: 'downloading'
-method: FileUrl
+method: CypressFileUrl
 default
 	"Answer a new URL with the receiver's path relative to the current working directory."
 	
@@ -681,7 +622,7 @@ default
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 fileName
 	"Return the last part of the path,
 	most often a filename but can also be a directory."
@@ -690,7 +631,7 @@ fileName
 %
 
 category: 'testing'
-method: FileUrl
+method: CypressFileUrl
 firstPartIsDriveLetter
 	"Return true if the first part of the path is a letter
 	followed by a $: like 'C:' "
@@ -704,13 +645,13 @@ firstPartIsDriveLetter
 %
 
 category: 'downloading'
-method: FileUrl
+method: CypressFileUrl
 hasContents
 	^true
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 host
 	"Return the host name, either 'localhost', '', or a fully qualified domain name."
 	
@@ -718,7 +659,7 @@ host
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 host: hostName
 	"Set the host name, either 'localhost', '', or a fully qualified domain name."
 	
@@ -726,7 +667,7 @@ host: hostName
 %
 
 category: 'private-initialization'
-method: FileUrl
+method: CypressFileUrl
 host: aHostString pathParts: aCollection isAbsolute: aBoolean
 
 	host := aHostString.
@@ -735,7 +676,7 @@ host: aHostString pathParts: aCollection isAbsolute: aBoolean
 %
 
 category: 'private-initialization'
-method: FileUrl
+method: CypressFileUrl
 initializeFromPathString: aPathString
 	"<aPathString> is a file path as a String.
 	We construct a path collection using various heuristics."
@@ -744,21 +685,22 @@ initializeFromPathString: aPathString
 	pathString := aPathString.
 	pathString isEmpty ifTrue: [pathString := '/'].
 	"Copy without empty string preceeding first / or between duplicated /s."
-	path := ((pathString subStrings: '/') copyWithout: '') collect: [:token | token unescapePercents].
+	path := ((pathString subStrings: '/') copyWithout: '')
+				collect: [:token | self decodeHttpEscapesOf: token].
 
 	"A path like 'C:' refers in practice to 'c:/'"
-	((pathString endsWith: '/') or:
-		[(hasDriveLetter := self firstPartIsDriveLetter) and: [path size = 1]])
+	(pathString last = $/
+		or: [(hasDriveLetter := self firstPartIsDriveLetter) and: [path size = 1]])
 			ifTrue: [path add: ''].
 
 	"Decide if we are absolute by checking for leading $/ or
 	beginning with drive letter. Smarts for other OSes?"
-	self isAbsolute: ((pathString beginsWith: '/')
-						or: [hasDriveLetter ifNil: [self firstPartIsDriveLetter]])
+	self isAbsolute: ((pathString at: 1) = $/
+				or: [hasDriveLetter ifNil: [self firstPartIsDriveLetter]])
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 isAbsolute
 	"Should the path be considered absolute to
 	the filesystem instead of relative to the default directory?"
@@ -767,7 +709,7 @@ isAbsolute
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 isAbsolute: aBoolean
 	"Set if the path should be considered absolute to
 	the filesystem instead of relative to the default directory."
@@ -776,7 +718,7 @@ isAbsolute: aBoolean
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 path
 	"Return an ordered collection of the path elements."
 	
@@ -784,7 +726,7 @@ path
 %
 
 category: 'accessing'
-method: FileUrl
+method: CypressFileUrl
 path: aCollection
 	"Set the collection of path elements."
 
@@ -792,64 +734,78 @@ path: aCollection
 %
 
 category: 'paths'
-method: FileUrl
+method: CypressFileUrl
 pathDirString
 	"Path to directory as url, using slash as delimiter.
 	Filename is left out."
 
-	^String streamContents: [ :s |
-		isAbsolute ifTrue: [ s nextPut: $/ ].
-		1 to: self path size - 1 do: [ :ii |
-			s nextPutAll: (path at: ii); nextPut: $/]]
+	| s |
+	s := WriteStreamPortable on: (String new: 100).
+	isAbsolute ifTrue: [s nextPut: $/].
+	1 to: self path size - 1
+		do: 
+			[:ii |
+			s
+				nextPutAll: (path at: ii);
+				nextPut: $/].
+	^s contents
 %
 
 category: 'paths'
-method: FileUrl
+method: CypressFileUrl
 pathForDirectory
 	"Path using local file system's pathname delimiter.
 	DOS paths with drive letters should not
 	be prepended with a delimiter even though
 	they are absolute. Filename is left out."
 
-	| delimiter |
-	delimiter :=  CypressFileUtilities current pathNameDelimiter.
-	^String streamContents: [ :s |
-		(self isAbsolute and: [self firstPartIsDriveLetter not])
-			ifTrue: [ s nextPutAll: delimiter ].
-		1 to: self path size - 1 do: [ :ii |
-			s nextPutAll: (path at: ii); nextPutAll: delimiter]]
+	| delimiter s |
+	delimiter := CypressFileUtilities current pathNameDelimiter.
+	s := WriteStreamPortable on: (String new: 100).
+	(self isAbsolute and: [self firstPartIsDriveLetter not])
+		ifTrue: [s nextPutAll: delimiter].
+	1 to: self path size - 1
+		do: 
+			[:ii |
+			s
+				nextPutAll: (path at: ii);
+				nextPutAll: delimiter].
+	^s contents
 %
 
 category: 'paths'
-method: FileUrl
+method: CypressFileUrl
 pathForFile
   ^ self pathString
 %
 
 category: 'private-initialization'
-method: FileUrl
+method: CypressFileUrl
 pathParts: aCollection isAbsolute: aBoolean
 
 	^self host: nil pathParts: aCollection isAbsolute: aBoolean
 %
 
 category: 'paths'
-method: FileUrl
+method: CypressFileUrl
 pathString
 	"Path as it appears in a URL with $/ as delimiter."
-	
-	
-	^String streamContents: [ :s | | first |
-		"isAbsolute ifTrue:[ s nextPut: $/ ]."
-		first := true.
-		self path do: [ :p |
-			first ifFalse: [ s nextPut: $/ ].
+
+	| s first |
+	s := WriteStreamPortable on: (String new: 100).
+
+	"isAbsolute ifTrue:[ s nextPut: $/ ]."
+	first := true.
+	self path do: 
+			[:p |
+			first ifFalse: [s nextPut: $/].
 			first := false.
-			s nextPutAll: p encodeForHTTP ] ]
+			self writeWithHttpEscapes: p on: s].
+	^s contents
 %
 
 category: 'copying'
-method: FileUrl
+method: CypressFileUrl
 postCopy
 	"Be sure not to share the path with the copy."
 
@@ -858,64 +814,70 @@ postCopy
 %
 
 category: 'printing'
-method: FileUrl
+method: CypressFileUrl
 printOn: aStream
 	"Return the FileUrl according to RFC3986
 		'file:'['//'<host>]<path>#<fragment>
 	Note that <host> being '' is equivalent to 'localhost' and is not printed."
 
-	aStream nextPutAll: self schemeName;
+	aStream
+		nextPutAll: self schemeName;
 		nextPut: $:.
 
 	"File URLs with hosts (which are fairly useless) cannot be relative."
-	host isEmpty ifFalse: [isAbsolute ifFalse: [aStream nextPutAll: '<ErroneousURL>'. ^nil].
-						aStream nextPutAll: '//';
-						nextPutAll: host].
-
+	host isEmpty
+		ifFalse: 
+			[isAbsolute
+				ifFalse: 
+					[aStream nextPutAll: '<ErroneousURL>'.
+					^nil].
+			aStream
+				nextPutAll: '//';
+				nextPutAll: host].
 	isAbsolute ifTrue: [aStream nextPut: $/].
-
-	aStream
-		nextPutAll: self pathString.
-
-	fragment ifNotNil:
-		[aStream
-			nextPut: $#;
-			nextPutAll: fragment encodeForHTTP].
+	aStream nextPutAll: self pathString.
+	fragment
+		ifNotNil: 
+			[aStream nextPut: $#.
+			self writeWithHttpEscapes: fragment on: aStream]
 %
 
 category: 'private-initialization'
-method: FileUrl
+method: CypressFileUrl
 privateInitializeFromText: aString
 	"Calculate host and path from a file URL in String format.
 	Some malformed formats are allowed and interpreted by guessing."
 
 	| schemeName pathString bare i |
 	bare := aString trimSeparators.
-	schemeName := Url schemeNameForString: bare.
+	schemeName := CypressUrl schemeNameForString: bare.
 	(schemeName isNil or: [schemeName ~= self schemeName])
-		ifTrue: [
-			host := ''.
+		ifTrue: 
+			[host := ''.
 			pathString := bare]
-		ifFalse: [
-			"First remove schemeName and colon"
-			bare := bare copyFrom: (schemeName size + 2) to: bare size.
+		ifFalse: 
+			["First remove schemeName and colon"
+			bare := bare copyFrom: schemeName size + 2 to: bare size.
 			"A proper file URL then has two slashes before host,
 			A malformed URL is interpreted as using syntax file:<path>."
-			(bare beginsWith: '//')
-				ifTrue: [i := bare indexOf: $/ startingAt: 3.
-						i=0 ifTrue: [
-								host := bare copyFrom: 3 to: bare size.
-								pathString := '']
-							ifFalse: [
-								host := bare copyFrom: 3 to: i-1.
-								pathString := bare copyFrom: host size + 3 to: bare size]]
-				ifFalse: [host := ''.
-						pathString := bare]].
+			(bare indexOfSubCollection: '//') = 1
+				ifTrue: 
+					[i := bare indexOf: $/ startingAt: 3.
+					i = 0
+						ifTrue: 
+							[host := bare copyFrom: 3 to: bare size.
+							pathString := '']
+						ifFalse: 
+							[host := bare copyFrom: 3 to: i - 1.
+							pathString := bare copyFrom: host size + 3 to: bare size]]
+				ifFalse: 
+					[host := ''.
+					pathString := bare]].
 	self initializeFromPathString: pathString
 %
 
 category: 'private-initialization'
-method: FileUrl
+method: CypressFileUrl
 privateInitializeFromText: pathString relativeTo: aUrl
 	"<pathString> should be a filesystem path.
 	This url is adjusted to be aUrl + the path."
@@ -924,63 +886,63 @@ privateInitializeFromText: pathString relativeTo: aUrl
 	self host: aUrl host.
 	self initializeFromPathString: pathString.
 	self isAbsolute: aUrl isAbsolute.
-
 	newPath := aUrl path copy.
 	newPath removeLast.	"empty string that says its a directory"
-	path do: [ :token |
-		((token ~= '..') and: [token ~= '.']) ifTrue: [ 
-			newPath addLast: token unescapePercents ].
-		token = '..' ifTrue: [ 
-			newPath isEmpty ifFalse: [ 
-				newPath last = '..' ifFalse: [ newPath removeLast ] ] ].
-		"token = '.' do nothing" ].
+	path do: 
+			[:token |
+			(token ~= '..' and: [token ~= '.'])
+				ifTrue: [newPath addLast: (self decodeHttpEscapesOf: token)].
+			token = '..'
+				ifTrue: 
+					[newPath isEmpty
+						ifFalse: [newPath last = '..' ifFalse: [newPath removeLast]]]
+			"token = '.' do nothing"].
 	path := newPath
-
-	
 %
 
 category: 'classification'
-method: FileUrl
+method: CypressFileUrl
 scheme
 	^self class schemeName
 %
 
 category: 'classification'
-method: FileUrl
+method: CypressFileUrl
 schemeName
 	^self class schemeName
 %
 
-! Class Implementation for GenericUrl
+! Class Implementation for CypressGenericUrl
 
-! ------------------- Class methods for GenericUrl
+! ------------------- Class methods for CypressGenericUrl
 
 category: 'parsing'
-classmethod: GenericUrl
+classmethod: CypressGenericUrl
 absoluteFromText: aString
+
 	| schemeName locator |
-	schemeName := Url schemeNameForString: aString.
-	schemeName ifNil: [ ^self schemeName: 'xnoscheme' locator: aString ].
-	locator := aString copyFrom: (schemeName size + 2) to: aString size.
+	schemeName := CypressUrl schemeNameForString: aString.
+	schemeName ifNil: [^self schemeName: 'xnoscheme' locator: aString].
+	locator := aString copyFrom: schemeName size + 2 to: aString size.
 	^self schemeName: schemeName locator: locator
 %
 
 category: 'instance creation'
-classmethod: GenericUrl
+classmethod: CypressGenericUrl
 schemeName: schemeName  locator: locator
 	^self new schemeName: schemeName  locator: locator
 %
 
-! ------------------- Instance methods for GenericUrl
+! ------------------- Instance methods for CypressGenericUrl
 
 category: 'access'
-method: GenericUrl
+method: CypressGenericUrl
 locator
 	^locator
 %
 
 category: 'printing'
-method: GenericUrl
+method: CypressGenericUrl
 printOn: aStream
 	
 	self schemeName ifNotNil: [
@@ -993,90 +955,92 @@ printOn: aStream
 %
 
 category: 'parsing'
-method: GenericUrl
+method: CypressGenericUrl
 privateInitializeFromText: aString
-	schemeName := Url schemeNameForString: aString.
-	locator :=  schemeName 
-		ifNil: [ aString ]
-		ifNotNil: [ aString copyFrom: (schemeName size+2) to: aString size ].
+
+	schemeName := CypressUrl schemeNameForString: aString.
+	locator := schemeName
+				ifNil: [aString]
+				ifNotNil: [aString copyFrom: schemeName size + 2 to: aString size]
 %
 
 category: 'parsing'
-method: GenericUrl
+method: CypressGenericUrl
 privateInitializeFromText: aString relativeTo: aUrl
 	schemeName := aUrl schemeName.
 	locator := aString.
 %
 
 category: 'classification'
-method: GenericUrl
+method: CypressGenericUrl
 scheme
 	^ self schemeName.
 %
 
 category: 'access'
-method: GenericUrl
+method: CypressGenericUrl
 schemeName
 	^schemeName
 %
 
 category: 'private'
-method: GenericUrl
+method: CypressGenericUrl
 schemeName: schemeName0  locator: locator0
 	schemeName := schemeName0.
 	locator := locator0.
 %
 
-! Class Implementation for BrowserUrl
+! Class Implementation for CypressBrowserUrl
 
-! ------------------- Class methods for BrowserUrl
+! ------------------- Class methods for CypressBrowserUrl
 
 category: 'constants'
-classmethod: BrowserUrl
+classmethod: CypressBrowserUrl
 schemeName
 
-	^ 'browser'
+	^'browser'
 %
 
-! ------------------- Instance methods for BrowserUrl
+! ------------------- Instance methods for CypressBrowserUrl
 
 category: 'downloading'
-method: BrowserUrl
+method: CypressBrowserUrl
 hasContents
+
 	^true
 %
 
-! Class Implementation for MailtoUrl
+! Class Implementation for CypressMailtoUrl
 
-! ------------------- Class methods for MailtoUrl
+! ------------------- Class methods for CypressMailtoUrl
 
 category: 'constants'
-classmethod: MailtoUrl
+classmethod: CypressMailtoUrl
 schemeName
 
 	^ 'mailto'
 %
 
-! Class Implementation for HierarchicalUrl
+! Class Implementation for CypressHierarchicalUrl
 
-! ------------------- Class methods for HierarchicalUrl
+! ------------------- Class methods for CypressHierarchicalUrl
 
 category: 'instance creation'
-classmethod: HierarchicalUrl
+classmethod: CypressHierarchicalUrl
 schemeName: schemeName  authority: authority  path: path  query: query
 	^self new schemeName: schemeName  authority: authority  path: path  query: query
 %
 
-! ------------------- Instance methods for HierarchicalUrl
+! ------------------- Instance methods for CypressHierarchicalUrl
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 authority
 	^authority
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 fileName
 	"Return the last part of the path,
 	most often a filename but does not need to be."
@@ -1085,32 +1049,35 @@ fileName
 %
 
 category: 'printing'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 fullPath
+
 	| ans |
 	ans := WriteStreamPortable on: String new.
-	path do: [ :pathElem |
-		ans nextPut: $/.
-		ans nextPutAll: pathElem encodeForHTTP. ].
-	self query isNil ifFalse: [ 
-		ans nextPut: $?.
-		ans nextPutAll: self query. ].
-	self fragment isNil ifFalse: [
-		ans nextPut: $#.
-		ans nextPutAll: self fragment encodeForHTTP. ].
-	
+	path do: 
+			[:pathElem |
+			ans nextPut: $/.
+			self writeWithHttpEscapes: pathElem on: ans].
+	self query isNil
+		ifFalse: 
+			[ans nextPut: $?.
+			ans nextPutAll: self query].
+	self fragment isNil
+		ifFalse: 
+			[ans nextPut: $#.
+			self writeWithHttpEscapes: self fragment on: ans].
 	^ans contents
 %
 
 category: 'downloading'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 hasContents
 	"most of these do...."
 	^true
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 isAbsolute
 	
 	path size > 0 ifFalse: [^ false].
@@ -1119,21 +1086,21 @@ isAbsolute
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 password
 	"http://user:pword@foo.com' asUrl password"
 	^password
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 path
 	"return a collection of the decoded path elements, as strings"
 	^path
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 path: aCollection
 	"Set the collection of path elements."
 
@@ -1141,13 +1108,13 @@ path: aCollection
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 port
 	^port
 %
 
 category: 'copying'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 postCopy
 	"Be sure not to share the path with the copy"
 
@@ -1156,60 +1123,73 @@ postCopy
 %
 
 category: 'printing'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 printOn: aStream
 
 	aStream nextPutAll: self schemeName.
 	aStream nextPutAll: '://'.
-	self username ifNotNil: [
-		aStream nextPutAll: self username encodeForHTTP.
-		self password ifNotNil: [
-			aStream nextPutAll: ':'.
-			aStream nextPutAll: self password encodeForHTTP].
-		aStream nextPutAll: '@' ].
+	self username
+		ifNotNil: 
+			[self writeWithHttpEscapes: self username on: aStream.
+			self password
+				ifNotNil: 
+					[aStream nextPutAll: ':'.
+					self writeWithHttpEscapes: self password on: aStream].
+			aStream nextPutAll: '@'].
 	aStream nextPutAll: self authority.
-	port ifNotNil: [aStream nextPut: $:; nextPutAll: port printString].
-	path do: [ :pathElem |
-		aStream nextPut: $/.
-		aStream nextPutAll: pathElem encodeForHTTP. ].
-	self query isNil ifFalse: [ 
-		aStream nextPut: $?.
-		aStream nextPutAll: self query. ].
-	self fragment isNil ifFalse: [
-		aStream nextPut: $#.
-		aStream nextPutAll: self fragment encodeForHTTP. ].
+	port
+		ifNotNil: 
+			[aStream
+				nextPut: $:;
+				nextPutAll: port printString].
+	path do: 
+			[:pathElem |
+			aStream nextPut: $/.
+			self writeWithHttpEscapes: pathElem on: aStream].
+	self query isNil
+		ifFalse: 
+			[aStream nextPut: $?.
+			aStream nextPutAll: self query].
+	self fragment isNil
+		ifFalse: 
+			[aStream nextPut: $#.
+			self writeWithHttpEscapes: self fragment on: aStream]
 %
 
 category: 'parsing'
-method: HierarchicalUrl
-privateInitializeFromText: aString 
+method: CypressHierarchicalUrl
+privateInitializeFromText: aString
+
 	| remainder ind specifiedSchemeName |
 	remainder := aString.
-	schemeName ifNil: 
-			[specifiedSchemeName := Url schemeNameForString: remainder.
-			specifiedSchemeName ifNotNil: 
+	schemeName
+		ifNil: 
+			[specifiedSchemeName := CypressUrl schemeNameForString: remainder.
+			specifiedSchemeName
+				ifNotNil: 
 					[schemeName := specifiedSchemeName.
 					remainder := remainder copyFrom: schemeName size + 2 to: remainder size].
-			schemeName ifNil: 
+			schemeName
+				ifNil: 
 					["assume HTTP"
 					schemeName := 'http']].
 
 	"remove leading // if it's there"
-	(remainder beginsWith: '//') 
+	(remainder indexOfSubCollection: '//') = 1
 		ifTrue: [remainder := remainder copyFrom: 3 to: remainder size].
 
 	"get the query"
 	ind := remainder indexOf: $?.
-	ind > 0 
+	ind > 0
 		ifTrue: 
 			[query := remainder copyFrom: ind + 1 to: remainder size.
 			remainder := remainder copyFrom: 1 to: ind - 1].
 
 	"get the authority"
 	ind := remainder indexOf: $/.
-	ind > 0 
+	ind > 0
 		ifTrue: 
-			[ind = 1 
+			[ind = 1
 				ifTrue: [authority := '']
 				ifFalse: 
 					[authority := remainder copyFrom: 1 to: ind - 1.
@@ -1219,21 +1199,25 @@ privateInitializeFromText: aString
 			remainder := ''].
 
 	"extract the username+password"
-	(authority includes: $@) 
+	ind := authority indexOf: $@.
+	ind > 0
 		ifTrue: 
-			[username := authority copyUpTo: $@.
-			authority := authority copyFrom: (authority indexOf: $@) + 1
-						to: authority size.
-			(username includes: $:) 
+			[username := authority copyFrom: 1 to: ind - 1.
+			authority := authority copyFrom: ind + 1 to: authority size.
+			ind := username indexOf: $:.
+			ind > 0
 				ifTrue: 
-					[password := (username copyFrom: (username indexOf: $:) + 1 to: username size) unescapePercents asByteArray decodeFromUTF8 asString.
-					username := (username copyUpTo: $:) unescapePercents asByteArray decodeFromUTF8 asString]
-				ifFalse: 
-					[password := nil.
-					username := username unescapePercents asByteArray decodeFromUTF8 asString]].
+					[password := (self
+								decodeHttpEscapesOf: (username copyFrom: ind + 1 to: username size))
+									asByteArray decodeFromUTF8
+								asString.
+					username := username copyFrom: 1 to: ind - 1]
+				ifFalse: [password := nil].
+			username := (self decodeHttpEscapesOf: username) asByteArray
+						decodeFromUTF8 asString].
 
 	"Extract the port"
-	(authority includes: $:) 
+	(authority includes: $:)
 		ifTrue: 
 			[| lastColonIndex portString |
 			lastColonIndex := authority findLast: [:c | c = $:].
@@ -1241,25 +1225,26 @@ privateInitializeFromText: aString
 			(portString allSatisfy: [:each | each isDigit])
 				ifTrue: 
 					[port := Integer fromString: portString.
-					(port > 65535) ifTrue: [self error: 'Invalid port number'].
-					 authority := authority copyFrom: 1 to: lastColonIndex - 1]
-				ifFalse:[self error: 'Invalid port number']].
+					port > 65535 ifTrue: [self error: 'Invalid port number'].
+					authority := authority copyFrom: 1 to: lastColonIndex - 1]
+				ifFalse: [self error: 'Invalid port number']].
 
 	"get the path"
-	path := self privateParsePath: remainder relativeTo: #() .
+	path := self privateParsePath: remainder relativeTo: #()
 %
 
 category: 'parsing'
-method: HierarchicalUrl
-privateInitializeFromText: aString relativeTo: aUrl 
+method: CypressHierarchicalUrl
+privateInitializeFromText: aString relativeTo: aUrl
+
 	| remainder ind basePath |
 	remainder := aString.
 	"set the scheme"
 	schemeName := aUrl schemeName.
 
 	"a leading // means the authority is specified, meaning it is absolute"
-	(remainder beginsWith: '//')
-		ifTrue: [^ self privateInitializeFromText: aString].
+	(remainder indexOfSubCollection: '//') = 1
+		ifTrue: [^self privateInitializeFromText: aString].
 
 	"otherwise, use the same authority"
 	authority := aUrl authority.
@@ -1270,59 +1255,61 @@ privateInitializeFromText: aString relativeTo: aUrl
 	"get the query"
 	ind := remainder indexOf: $?.
 	ind > 0
-		ifTrue: [query := remainder copyFrom: ind + 1 to: remainder size.
+		ifTrue: 
+			[query := remainder copyFrom: ind + 1 to: remainder size.
 			remainder := remainder copyFrom: 1 to: ind - 1].
 
 	"get the path"
-	(remainder beginsWith: '/')
-		ifTrue: [ basePath := #() ]
-		ifFalse: [ basePath := aUrl path ].
-	path := self privateParsePath: remainder  relativeTo: basePath.
-
+	(remainder indexOfSubCollection: '/') = 1
+		ifTrue: [basePath := #()]
+		ifFalse: [basePath := aUrl path].
+	path := self privateParsePath: remainder relativeTo: basePath
 %
 
 category: 'parsing'
-method: HierarchicalUrl
-privateParsePath: remainder relativeTo: basePath 
+method: CypressHierarchicalUrl
+privateParsePath: remainder relativeTo: basePath
+
 	| nextTok s parsedPath |
 	s := remainder readStream.
 	parsedPath := OrderedCollection new.
 	parsedPath addAll: basePath.
-	parsedPath isEmpty ifFalse: [ parsedPath removeLast ].
+	parsedPath isEmpty ifFalse: [parsedPath removeLast].
 	
-	[ s peek = $/ ifTrue: [ s next ].
+	[s peek = $/ ifTrue: [s next].
 	nextTok := WriteStreamPortable on: String new.
-	[ s atEnd or: [ s peek = $/ ] ] whileFalse: [ nextTok nextPut: s next ].
-	nextTok := nextTok contents unescapePercents.
-	nextTok = '..' 
-		ifTrue: [ parsedPath size > 0 ifTrue: [ parsedPath removeLast ] ]
-		ifFalse: [ nextTok ~= '.' ifTrue: [ parsedPath add: nextTok ] ].
-	s atEnd ] whileFalse.
-	parsedPath isEmpty ifTrue: [ parsedPath add: '' ].
-	^ parsedPath
+	[s atEnd or: [s peek = $/]] whileFalse: [nextTok nextPut: s next].
+	nextTok := self decodeHttpEscapesOf: nextTok contents.
+	nextTok = '..'
+		ifTrue: [parsedPath size > 0 ifTrue: [parsedPath removeLast]]
+		ifFalse: [nextTok ~= '.' ifTrue: [parsedPath add: nextTok]].
+	s atEnd]
+			whileFalse.
+	parsedPath isEmpty ifTrue: [parsedPath add: ''].
+	^parsedPath
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 query
 	"return the query, the part after any ?.  Any %XY's have already been decoded.  If there wasno query part, nil is returned (it is possible to also have an empty query"
 	^query 
 %
 
 category: 'classification'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 scheme
 	^ self schemeName.
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 schemeName
 	^schemeName
 %
 
 category: 'private'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 schemeName: schemeName0  authority: authority0  path: path0  query: query0
 	"initialize a new instance"
 	schemeName := schemeName0.
@@ -1332,65 +1319,46 @@ schemeName: schemeName0  authority: authority0  path: path0  query: query0
 %
 
 category: 'access'
-method: HierarchicalUrl
+method: CypressHierarchicalUrl
 username
 	"http://user:pword@foo.com' asUrl username"
 	^username
 %
 
-! Class Implementation for FtpUrl
+! Class Implementation for CypressFtpUrl
 
-! ------------------- Class methods for FtpUrl
+! ------------------- Class methods for CypressFtpUrl
 
 category: 'constants'
-classmethod: FtpUrl
+classmethod: CypressFtpUrl
 schemeName
 
 	^ 'ftp'.
 %
 
-! Class Implementation for HttpUrl
+! Class Implementation for CypressHttpUrl
 
-! ------------------- Class methods for HttpUrl
+! ------------------- Class methods for CypressHttpUrl
 
 category: 'constants'
-classmethod: HttpUrl
+classmethod: CypressHttpUrl
 schemeName
 
 	^ 'http'.
 %
 
-! Class Implementation for HttpsUrl
+! Class Implementation for CypressHttpsUrl
 
-! ------------------- Class methods for HttpsUrl
+! ------------------- Class methods for CypressHttpsUrl
 
 category: 'constants'
-classmethod: HttpsUrl
+classmethod: CypressHttpsUrl
 schemeName
 
 	^ 'https'.
 %
 
 ! Class Extensions
-
-! Class Extension for String
-
-! ------------------- Instance methods for String
-
-category: '*network-url'
-method: String
-asUrl
-	"convert to a Url"
-	"'http://www.cc.gatech.edu/' asUrl"
-	"msw://chaos.resnet.gatech.edu:9000/' asUrl"
-	^Url absoluteFromText: self
-%
-
-category: '*network-url'
-method: String
-asUrlRelativeTo: aUrl
-	^aUrl newFromRelativeText: self
-%
 
 ! Class initializers 
 
@@ -1400,6 +1368,6 @@ true.
 
 
 
-! End of Package: Network-Url
+! End of Package: Cypress-Network-Url
 
 

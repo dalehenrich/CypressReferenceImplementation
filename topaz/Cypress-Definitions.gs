@@ -51,7 +51,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -66,7 +66,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: 'CypressLoaderError is used to report a failure applying a specific CypressPatchOperation.
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+CypressLoaderError is used to report a failure applying a specific CypressPatchOperation.
 The CypressLoader made a first attempt to apply the Patch Operation and reported a 
 CypressLoaderErrorNotification, set aside the Patch Operation, and has retried it after applying
 all other Patch Operations.
@@ -91,7 +93,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -106,7 +108,9 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: 'CypressLoaderErrorNotification is used to notify a consumer of the CypressLoader that a particular CypressPatchOperation failed.
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.
+
+CypressLoaderErrorNotification is used to notify a consumer of the CypressLoader that a particular CypressPatchOperation failed.
 As a Notification, it resumes by default, logging the error to the Transcript.
 
 
@@ -129,7 +133,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -144,7 +148,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -159,7 +163,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -174,7 +178,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -189,7 +193,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -204,7 +208,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -219,7 +223,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -234,7 +238,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -249,7 +253,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -264,7 +268,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -279,7 +283,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -294,7 +298,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -309,7 +313,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -324,7 +328,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Definitions';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -374,12 +378,13 @@ category: 'initializing - private'
 method: CypressLoaderError
 initializeMessageText
 
-	messageText := String streamContents: 
-					[:stream |
-					stream
-						nextPutAll: self patchOperation printString;
-						nextPutAll: ' failed because ';
-						nextPutAll: self exception printString]
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	stream
+		nextPutAll: self patchOperation printString;
+		nextPutAll: ' failed because ';
+		nextPutAll: self exception printString.
+	messageText := stream contents
 %
 
 category: 'initializing - private'
@@ -446,15 +451,16 @@ category: 'initializing - private'
 method: CypressLoaderMissingClasses
 initializeMessageText
 
-	messageText := String streamContents: 
-					[:stream |
-					stream nextPutAll: 'Missing classes:'.
-					self requirementsMap keysAndValuesDo: 
-							[:className :definitions |
-							stream
-								space;
-								nextPutAll: className printString , '(' , definitions size printString
-											, ')']]
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	stream nextPutAll: 'Missing classes:'.
+	self requirementsMap keysAndValuesDo: 
+			[:className :definitions |
+			stream
+				space;
+				nextPutAll: className printString , '(' , definitions size printString
+							, ')'].
+	messageText := stream contents
 %
 
 category: 'initializing - private'
@@ -528,12 +534,13 @@ category: 'initializing - private'
 method: CypressLoaderErrorNotification
 initializeMessageText
 
-	messageText := String streamContents: 
-					[:stream |
-					stream
-						nextPutAll: self patchOperation printString;
-						nextPutAll: ' failed because ';
-						nextPutAll: self exception printString]
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	stream
+		nextPutAll: self patchOperation printString;
+		nextPutAll: ' failed because ';
+		nextPutAll: self exception printString.
+	messageText := stream contents
 %
 
 category: 'initializing - private'
@@ -574,9 +581,40 @@ patchOperation: aCypressPatchOperation
 
 ! ------------------- Class methods for CypressObject
 
+category: 'miscellany'
+classmethod: CypressObject
+collection: aCollection gather: aOneArgBlock
+	"Evaluate the block once for each element of aCollection. The block should answer a collection. 
+	Answer an Array containing all elements of all the answered collections."
+
+	| result |
+	result := Array new.
+	aCollection do: [:each | result addAll: (aOneArgBlock value: each)].
+	^result
+%
+
+category: 'miscellany'
+classmethod: CypressObject
+elementsIn: sourceCollection butNotIn: exclusionCollection
+
+	| exclusionSet |
+	exclusionSet := exclusionCollection asSet.
+	^sourceCollection reject: [:each | exclusionSet includes: each]
+%
+
+category: 'miscellany'
+classmethod: CypressObject
+elementsInBoth: collection1 and: collection2
+	"Set intersection generalized to any collections."
+
+	| temporarySet |
+	temporarySet := collection2 asSet.
+	^collection1 select: [:each | temporarySet includes: each]
+%
+
 category: 'converting'
 classmethod: CypressObject
-normalizeLineEndings: aString
+normalizeLineEndingsOf: aString
 	"Answer a copy of aString with the line endings normalized to
 	 correspond to the current platform, regardless of how they were
 	 saved. For example, Squeak uses CR and would normalize with
@@ -584,7 +622,55 @@ normalizeLineEndings: aString
 
 	 GemStone Smalltalk uses the Unix line ending of LF."
 
-	^aString withUnixLineEndings.
+	| cr lf inPos outPos outString newOutPos indexLF indexCR |
+	cr := Character cr.
+	indexCR := aString indexOf: cr startingAt: 1.
+	indexCR = 0 ifTrue: [^aString].
+	lf := Character lf.
+	indexLF := aString indexOf: lf startingAt: 1.
+	indexLF = 0 ifTrue: [^aString copyReplacing: cr with: lf].
+	inPos := outPos := 1.
+	outString := String new: aString size.
+	
+	["check if next CR is before next LF or if there are no more LF"
+	(indexLF = 0 or: [indexCR < indexLF])
+		ifTrue: 
+			[newOutPos := outPos + 1 + indexCR - inPos.
+			outString
+				replaceFrom: outPos
+				to: newOutPos - 2
+				with: aString
+				startingAt: inPos.
+			outString at: newOutPos - 1 put: lf.
+			outPos := newOutPos.
+			1 + indexCR = indexLF
+				ifTrue: 
+					["Caught a CR-LF pair"
+					inPos := 1 + indexLF.
+					indexLF := aString indexOf: lf startingAt: inPos]
+				ifFalse: [inPos := 1 + indexCR].
+			indexCR := aString indexOf: cr startingAt: inPos]
+		ifFalse: 
+			[newOutPos := outPos + 1 + indexLF - inPos.
+			outString
+				replaceFrom: outPos
+				to: newOutPos - 1
+				with: aString
+				startingAt: inPos.
+			outPos := newOutPos.
+			inPos := 1 + indexLF.
+			indexLF := aString indexOf: lf startingAt: inPos].
+	indexCR = 0]
+			whileFalse.
+
+	"no more CR line endings. copy the rest"
+	newOutPos := outPos + (aString size - inPos + 1).
+	outString
+		replaceFrom: outPos
+		to: newOutPos - 1
+		with: aString
+		startingAt: inPos.
+	^outString copyFrom: 1 to: newOutPos - 1
 %
 
 ! ------------------- Instance methods for CypressObject
@@ -593,7 +679,11 @@ category: 'accessing'
 method: CypressObject
 allClasses
 
-	^System myUserProfile symbolList allSatisfying: [:each | each isBehavior]
+	| classes |
+	classes := Array new.
+	System myUserProfile symbolList
+		do: [:dict | classes addAll: (dict select: [:each | each isBehavior])].
+	^classes
 %
 
 category: 'private'
@@ -608,15 +698,29 @@ category: 'accessing'
 method: CypressObject
 classesInPackageNamed: aString
 
-	| packageName candidateName |
+	| packageName classes |
 	packageName := aString asLowercase.
-	^(System myUserProfile symbolList allSatisfying: 
-			[:each |
-			each isBehavior and: 
-					[candidateName := each category asLowercase.
-					candidateName = packageName
-						or: [candidateName beginsWith: packageName , '-']]])
-		sortAscending: #('name')
+	classes := Array new.
+	System myUserProfile symbolList do: 
+			[:dict |
+			classes
+				addAll: (dict select: 
+							[:each |
+							each isBehavior and: 
+									[| candidateName |
+									candidateName := each category asLowercase.
+									candidateName = packageName
+										or: [(candidateName indexOfSubCollection: packageName , '-') = 1]]])].
+	^classes sortAscending: #('name')
+%
+
+category: 'miscellany'
+method: CypressObject
+collection: aCollection gather: aOneArgBlock
+	"Evaluate the block once for each element of aCollection. The block should answer a collection. 
+	Answer an Array containing all elements of all the answered collections."
+
+	^self class collection: aCollection gather: aOneArgBlock
 %
 
 category: 'initializing'
@@ -650,6 +754,21 @@ determineClassHierarchicalOrder: someClasses
 	^order
 %
 
+category: 'miscellany'
+method: CypressObject
+elementsIn: sourceCollection butNotIn: exclusionCollection
+
+	^self class elementsIn: sourceCollection butNotIn: exclusionCollection
+%
+
+category: 'miscellany'
+method: CypressObject
+elementsInBoth: collection1 and: collection2
+	"Set intersection generalized to any collections."
+
+	^self class elementsInBoth: collection1 and: collection2
+%
+
 category: 'initializing'
 method: CypressObject
 initialize
@@ -658,13 +777,13 @@ initialize
 
 category: 'converting'
 method: CypressObject
-normalizeLineEndings: aString
+normalizeLineEndingsOf: aString
 	"Answer a copy of aString with the line endings normalized to
 	 correspond to the current platform, regardless of how they were
 	 saved. For example, Squeak uses CR and would normalize with
 	 #withSqueakLineEndings, for example."
 
-	^self class normalizeLineEndings: aString.
+	^self class normalizeLineEndingsOf: aString.
 %
 
 category: 'private'
@@ -730,10 +849,11 @@ category: 'converting'
 method: CypressObject
 stringForVariables: variableList
 
-	^String streamContents: 
-			[:stream |
-			variableList do: [:each | stream nextPutAll: each]
-				separatedBy: [stream space]]
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	variableList do: [:each | stream nextPutAll: each]
+		separatedBy: [stream space].
+	^stream contents
 %
 
 category: 'accessing'
@@ -795,7 +915,11 @@ description
 category: 'accessing'
 method: CypressDefinition
 details
-  ^ String streamContents: [ :stream | self printDetailsOn: stream ]
+
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	self printDetailsOn: stream.
+	^stream contents
 %
 
 category: 'comparing'
@@ -870,6 +994,26 @@ unloadDefinition
 
 category: 'instance creation'
 classmethod: CypressClassDefinition
+forClass: aClass
+
+	| superclassname |
+	superclassname := aClass superclass
+				ifNil: ['nil']
+				ifNotNil: [:sClass | sClass name].
+	^self
+		name: aClass name
+		superclassName: superclassname
+		category: aClass category
+		instVarNames: aClass instVarNames
+		classInstVarNames: aClass class instVarNames
+		classVarNames: aClass classVarNames
+		poolDictionaryNames: aClass sharedPools
+		comment: aClass comment
+		subclassType: (self subclassTypeOf: aClass)
+%
+
+category: 'instance creation'
+classmethod: CypressClassDefinition
 name: aClassName superclassName: aSuperclassName category: aCategory instVarNames: someInstanceVariableNames classInstVarNames: someClassInstanceVariableNames classVarNames: someClassVariableNames poolDictionaryNames: somePoolDictionaryNames comment: aComment subclassType: subclassType
 
 	^self new
@@ -884,8 +1028,22 @@ name: aClassName superclassName: aSuperclassName category: aCategory instVarName
 				collect: [:each | each asString])
 		poolDictionaryNames: (somePoolDictionaryNames asArray
 				collect: [:each | each asString])
-		comment: (self normalizeLineEndings: aComment)
+		comment: (self normalizeLineEndingsOf: aComment)
 		subclassType: subclassType
+%
+
+category: 'private'
+classmethod: CypressClassDefinition
+subclassTypeOf: aClass
+	"Answer a description of the argument to identify whether it is a regular class,
+	 a byte subclass, or an indexable subclass."
+
+	^(aClass isBytes and: [aClass superClass isBytes not])
+		ifTrue: ['byteSubclass']
+		ifFalse: 
+			[(aClass isIndexable and: [aClass superClass isIndexable not])
+				ifTrue: ['indexableSubclass']
+				ifFalse: ['']]
 %
 
 ! ------------------- Instance methods for CypressClassDefinition
@@ -947,55 +1105,55 @@ classDefinition: classBlock methodDefinition: methodBlock
 category: 'accessing'
 method: CypressClassDefinition
 classDefinitionCreationString
-  ^ String
-    streamContents: [ :stream | 
-      | symbolDict |
-      stream
-        nextPutAll: '(CypressClassDefinition';
-        lf;
-        tab;
-        nextPutAll: 'name: ' , self className printString;
-        lf;
-        tab;
-        nextPutAll: 'superclassName: ' , self superclassName printString;
-        lf;
-        tab;
-        nextPutAll: 'category: ' , self category printString;
-        lf;
-        tab;
-        nextPutAll: 'instVarNames: #(' , self instanceVariablesString , ')';
-        lf;
-        tab;
-        nextPutAll:
-            'classInstVarNames: #(' , self classInstanceVariablesString , ')';
-        lf;
-        tab;
-        nextPutAll: 'classVarNames: #(' , self classVariablesString , ')';
-        lf;
-        tab;
-        nextPutAll:
-            'poolDictionaryNames: #(' , self poolDictionariesString , ')';
-        lf;
-        tab;
-        nextPutAll: 'comment: ' , self comment printString;
-        lf;
-        tab;
-        nextPutAll: 'subclassType: ' , self subclassType printString , ')';
-        lf;
-        tab;
-        tab;
-        yourself.
-      symbolDict := self symbolDictionaryForClassNamed: self className.
-      self actualClassOrNil isNil
-        ifTrue: [ 
-          stream
-            nextPutAll: 'loadClassDefinition.';
-            yourself ]
-        ifFalse: [ 
-          stream
-            nextPutAll:
-                'loadClassDefinition: ' , symbolDict name asString printString , '.';
-            yourself ] ]
+
+	| stream symbolDict |
+	stream := WriteStreamPortable on: (String new: 100).
+	stream
+		nextPutAll: '(CypressClassDefinition';
+		lf;
+		tab;
+		nextPutAll: 'name: ' , self className printString;
+		lf;
+		tab;
+		nextPutAll: 'superclassName: ' , self superclassName printString;
+		lf;
+		tab;
+		nextPutAll: 'category: ' , self category printString;
+		lf;
+		tab;
+		nextPutAll: 'instVarNames: #(' , self instanceVariablesString , ')';
+		lf;
+		tab;
+		nextPutAll: 'classInstVarNames: #(' , self classInstanceVariablesString
+					, ')';
+		lf;
+		tab;
+		nextPutAll: 'classVarNames: #(' , self classVariablesString , ')';
+		lf;
+		tab;
+		nextPutAll: 'poolDictionaryNames: #(' , self poolDictionariesString , ')';
+		lf;
+		tab;
+		nextPutAll: 'comment: ' , self comment printString;
+		lf;
+		tab;
+		nextPutAll: 'subclassType: ' , self subclassType printString , ')';
+		lf;
+		tab;
+		tab;
+		yourself.
+	symbolDict := self symbolDictionaryForClassNamed: self className.
+	self actualClassOrNil isNil
+		ifTrue: 
+			[stream
+				nextPutAll: 'loadClassDefinition.';
+				yourself]
+		ifFalse: 
+			[stream
+				nextPutAll: 'loadClassDefinition: ' , symbolDict name asString printString
+							, '.';
+				yourself].
+	^stream contents
 %
 
 category: 'private'
@@ -1060,7 +1218,7 @@ createOrReviseByteClass
 		byteSubclass: self name
 		classVars: (self classVarNames collect: [:each | each asSymbol])
 		classInstVars: (self classInstVarNames collect: [:each | each asSymbol])
-		poolDictionaries: #()
+		poolDictionaries: self poolDictionaryList
 		inDictionary: (self symbolDictionaryForClassNamed: self name)
 		options: #())
 			category: category;
@@ -1098,7 +1256,7 @@ createOrReviseIndexableClass
 		instVarNames: (self instVarNames collect: [:each | each asSymbol])
 		classVars: (self classVarNames collect: [:each | each asSymbol])
 		classInstVars: (self classInstVarNames collect: [:each | each asSymbol])
-		poolDictionaries: #()
+		poolDictionaries: self poolDictionaryList
 		inDictionary: (self symbolDictionaryForClassNamed: self name)
 		options: #())
 			category: category;
@@ -1120,7 +1278,7 @@ createOrReviseRegularClass
 		instVarNames: (self instVarNames collect: [:each | each asSymbol])
 		classVars: (self classVarNames collect: [:each | each asSymbol])
 		classInstVars: (self classInstVarNames collect: [:each | each asSymbol])
-		poolDictionaries: #()
+		poolDictionaries: self poolDictionaryList
 		inDictionary: (self symbolDictionaryForClassNamed: self name)
 		options: #())
 			category: category;
@@ -1264,11 +1422,16 @@ recompileWithSubclassesFrom: oldClass to: newClass symbolList: aSymbolList
 	| olds news removedClassVariables removedSharedPools organizer subclasses newSubclass |
 	olds := oldClass _classVars ifNil: [#()] ifNotNil: [:vars | vars keys].
 	news := newClass _classVars ifNil: [#()] ifNotNil: [:vars | vars keys].
-	removedClassVariables := olds difference: news.
-	removedSharedPools := oldClass sharedPools difference: newClass sharedPools.
+	removedClassVariables := self elementsIn: olds butNotIn: news.
+	removedSharedPools := self elementsIn: oldClass sharedPools
+				butNotIn: newClass sharedPools.
 	self failedCompiledMethods: (newClass
 				_copyMethodsAndVariablesFrom: oldClass
-				except: { $V. removedClassVariables. $P. removedSharedPools }
+				except: 
+					{$V.
+					removedClassVariables.
+					$P.
+					removedSharedPools}
 				dictionaries: aSymbolList).
 	organizer := ClassOrganizer new.
 	subclasses := organizer subclassesOf: oldClass.
@@ -1294,12 +1457,52 @@ recompileWithSubclassesFrom: oldClass to: newClass symbolList: aSymbolList
 							symbolList: aSymbolList]]
 %
 
+category: 'loading'
+method: CypressClassDefinition
+poolDictionaryList
+
+  ^ self poolDictionariesForNames: self poolDictionaryNames
+%
+
+category: 'loading'
+method: CypressClassDefinition
+poolDictionariesForNames: pdNames
+  | ar existingDict symList sharedPool |
+  ar := Array new.
+  symList := System myUserProfile symbolList.
+  pdNames
+    do: [ :poolName | 
+      existingDict := symList objectNamed: poolName.
+      existingDict
+        ifNil: [ 
+          | pool |
+          pool := SymbolDictionary new.
+          pool name: poolName asSymbol.
+          ar add: pool ]
+        ifNotNil: [ 
+          (existingDict isKindOf: SymbolDictionary)
+            ifTrue: [ ar add: existingDict ]
+            ifFalse: [ 
+              sharedPool ifNil: [ sharedPool := symList objectNamed: #'SharedPool' ].
+              ((existingDict isKindOf: Class)
+                and: [ existingDict isSubclassOf: sharedPool ])
+                ifTrue: [ 
+                  | cvars pName |
+                  ar add: (cvars := existingDict _createClassVarsDict).
+                  pName := poolName asSymbol.	"only change dictionary name if needed , to avoid SecurityError"
+                  cvars name ~~ pName
+                    ifTrue: [ cvars name: pName ] ] ] ] ].
+  ^ ar
+%
+
 category: 'dependency'
 method: CypressClassDefinition
 requirements
 	"Answer list of global names required by this definition"
 
-	^{self superclassName}
+  self superclassName = 'nil'
+    ifTrue: [ ^ #() ].
+  ^{self superclassName}
 %
 
 category: 'accessing'
@@ -1345,7 +1548,22 @@ className: aName classIsMeta: isMetaclass selector: aSelector category: aCategor
 		classIsMeta: isMetaclass
 		selector: aSelector asString
 		category: aCategory asString
-		source: (self normalizeLineEndings: aSource)
+		source: (self normalizeLineEndingsOf: aSource)
+%
+
+category: 'instance creation'
+classmethod: CypressMethodDefinition
+forMethod: aGsNMethod
+
+	| behavior selector |
+	behavior := aGsNMethod inClass.
+	selector := aGsNMethod selector.
+	^self new
+		className: behavior theNonMetaClass name asString
+		classIsMeta: behavior isMeta
+		selector: selector asString
+		category: (behavior categoryOfSelector: selector) asString
+		source: (self normalizeLineEndingsOf: aGsNMethod sourceString asString)
 %
 
 ! ------------------- Instance methods for CypressMethodDefinition
@@ -1412,7 +1630,7 @@ className: aName classIsMeta: isMetaclass selector: aSelector category: aCategor
 	classIsMeta := isMetaclass.
 	selector := aSelector.
 	category := aCategory.
-	source := self normalizeLineEndings: aSource
+	source := self normalizeLineEndingsOf: aSource
 %
 
 category: 'accessing'
@@ -1596,7 +1814,8 @@ addAll: aCollection
 category: 'private'
 method: CypressDependencySorter
 addExternalProvisions: aCollection
-	(aCollection intersection: self externalRequirements)
+
+	(self elementsInBoth: aCollection and: self externalRequirements)
 		do: [:globalName | self addProvision: globalName]
 %
 
@@ -1631,10 +1850,13 @@ addToOrder: aPatchOperation
 category: 'accessing'
 method: CypressDependencySorter
 externalRequirements
+
 	| unloaded providedByUnloaded |
 	unloaded := self itemsWithMissingRequirements.
-	providedByUnloaded := (unloaded gather: [:e | e provisions]) asSet.
-	^ self required keys reject: [:globalName | providedByUnloaded includes: globalName ]
+	providedByUnloaded := (self collection: unloaded
+				gather: [:e | e provisions]) asSet.
+	^self required keys
+		reject: [:globalName | providedByUnloaded includes: globalName]
 %
 
 category: 'private'
@@ -1685,7 +1907,7 @@ unresolvedRequirementsFor: aPatchOperation
 	"Answer a list of global names that are required by <aPatchOperation>, but not 
 	 provided by patchOperations that have already been processed"
 
-	^ aPatchOperation requirements difference: self provided
+	^self elementsIn: aPatchOperation requirements butNotIn: self provided
 %
 
 ! Class Implementation for CypressLoader
@@ -2027,8 +2249,8 @@ retryFailedLoads
 	self
 		resetErrors;
 		errorOnFailedPatchOperations;
-		loadAdditions: (self additions intersection: failed);
-		unloadRemovals: (self removals intersection: failed).
+		loadAdditions: (self elementsInBoth: self additions and: failed);
+		unloadRemovals: (self elementsInBoth: self removals and: failed)
 %
 
 category: 'accessing'
@@ -2101,27 +2323,29 @@ category: 'snapshotting'
 method: CypressPackageDefinition
 addClass: aClass toDefinitions: definitions
 
-	definitions add: aClass asCypressClassDefinition
+	definitions add: (CypressClassDefinition forClass: aClass)
 %
 
 category: 'snapshotting'
 method: CypressPackageDefinition
 addExtensionMethodsFromClass: aClass toMap: classMap
-  | defs map |
-  defs := classMap
-    at: aClass theNonMetaClass
-    ifAbsent: [ OrderedCollection new ].
-  map := Dictionary new.
-  aClass
-    categorysDo: [ :category :selectors | 
-      (category asLowercase beginsWith: '*' , self basePackageName asLowercase)
-        ifTrue: [ map at: category put: selectors asSortedCollection ] ].
-  map keys asSortedCollection
-    do: [ :category | 
-      (map at: category)
-        do: [ :selector | defs add: (aClass compiledMethodAt: selector) asCypressMethodDefinition ] ].
-  defs notEmpty
-    ifTrue: [ classMap at: aClass theNonMetaClass put: defs ]
+
+	| defs map |
+	defs := classMap at: aClass theNonMetaClass
+				ifAbsent: [OrderedCollection new].
+	map := Dictionary new.
+	aClass categorysDo: 
+			[:category :selectors |
+			(category asLowercase
+				indexOfSubCollection: '*' , self basePackageName asLowercase) = 1
+				ifTrue: [map at: category put: selectors asSortedCollection]].
+	map keys asSortedCollection do: 
+			[:category |
+			(map at: category) do: 
+					[:selector |
+					defs add: (CypressMethodDefinition
+								forMethod: (aClass compiledMethodAt: selector))]].
+	defs notEmpty ifTrue: [classMap at: aClass theNonMetaClass put: defs]
 %
 
 category: 'snapshotting'
@@ -2129,9 +2353,10 @@ method: CypressPackageDefinition
 addMethodsFromClass: aClass toDefinitions: definitions
 	"Add only those methods which are not extensions from other packages."
 
-	((aClass methodDictionary reject: [:each | each category first = $*])
-		asSortedCollection: [:a :b | a selector <= b selector])
-			do: [:method | definitions add: method asCypressMethodDefinition]
+	(((aClass methodDictForEnv: 0)
+		reject: [:each | (each inClass categoryOfSelector: each selector) first = $*])
+			asSortedCollection: [:a :b | a selector <= b selector])
+			do: [:method | definitions add: (CypressMethodDefinition forMethod: method)]
 %
 
 category: 'accessing'
@@ -2716,60 +2941,6 @@ updatePackage: aPackage defaultSymbolDictionaryName: defaultSymbolDictionaryName
 %
 
 ! Class Extensions
-
-! Class Extension for Class
-
-! ------------------- Instance methods for Class
-
-category: '*Cypress-Definitions'
-method: Class
-asCypressClassDefinition
-  | superclassname |
-  superclassname := self superclass
-    ifNil: [ 'nil' ]
-    ifNotNil: [ :sClass | sClass name ].
-  ^ CypressClassDefinition
-    name: self name
-    superclassName: superclassname
-    category: self category
-    instVarNames: self instVarNames
-    classInstVarNames: self class instVarNames
-    classVarNames: self classVarNames
-    poolDictionaryNames: self sharedPools
-    comment: self comment
-    subclassType: self subclassType
-%
-
-category: '*Cypress-Definitions'
-method: Class
-subclassType
-  "Answer a description of the receiver to identify whether it is a regular class,
-	 a byte subclass, or an indexable subclass."
-
-  ^ (self isBytes and: [ self superClass isBytes not ])
-    ifTrue: [ 'byteSubclass' ]
-    ifFalse: [ 
-      (self isIndexable and: [ self superClass isIndexable not ])
-        ifTrue: [ 'indexableSubclass' ]
-        ifFalse: [ '' ] ]
-%
-
-! Class Extension for GsNMethod
-
-! ------------------- Instance methods for GsNMethod
-
-category: '*Cypress-Definitions'
-method: GsNMethod
-asCypressMethodDefinition
-	"Try to coerce Unicode source to simple Strings when possible."
-
-	^CypressMethodDefinition
-		className: self methodClass theNonMetaClass name
-		classIsMeta: self methodClass isMeta
-		selector: self selector
-		category: self category
-		source: self sourceString asString
-%
 
 ! Class initializers 
 

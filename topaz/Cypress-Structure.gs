@@ -51,7 +51,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -66,7 +66,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -81,7 +81,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -96,7 +96,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -111,7 +111,22 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
+		immediateInvariant.
+true.
+%
+
+doit
+(Object
+	subclass: 'CypressGsGeneralDependencySorter'
+	instVarNames: #( candidates dependsOnConverter dependentConverter individualDependencyMap dependencyGraphs candidateAliasMap )
+	classVars: #(  )
+	classInstVars: #(  )
+	poolDictionaries: #()
+	inDictionary: Globals
+	options: #())
+		category: 'Cypress-Structure';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -126,22 +141,7 @@ doit
 	inDictionary: Globals
 	options: #())
 		category: 'Cypress-Structure';
-		comment: '';
-		immediateInvariant.
-true.
-%
-
-doit
-(Object
-	subclass: 'GsGeneralDependencySorter'
-	instVarNames: #( candidates dependsOnConverter dependentConverter individualDependencyMap dependencyGraphs candidateAliasMap )
-	classVars: #(  )
-	classInstVars: #(  )
-	poolDictionaries: #()
-	inDictionary: Globals
-	options: #())
-		category: 'Cypress-Structure';
-		comment: '';
+		comment: 'All Cypress classes are private to GemStone and are likely to be removed in a future release.';
 		immediateInvariant.
 true.
 %
@@ -551,29 +551,23 @@ isMetaclass: aBoolean
 category: 'accessing'
 method: CypressMethodStructure
 selector
-    ^ String
-        streamContents: [ :stream | 
-            self name
-                do: [ :chara | 
-                    stream
-                        nextPut:
-                            (chara = $.
-                                ifTrue: [ $: ]
-                                ifFalse: [ chara ]) ] ]
+
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	self name
+		do: [:chara | stream nextPut: (chara = $. ifTrue: [$:] ifFalse: [chara])].
+	^stream contents
 %
 
 category: 'accessing'
 method: CypressMethodStructure
 selector: aString
-    name := String
-        streamContents: [ :stream | 
-            aString
-                do: [ :chara | 
-                    stream
-                        nextPut:
-                            (chara = $:
-                                ifTrue: [ $. ]
-                                ifFalse: [ chara ]) ] ]
+
+	| stream |
+	stream := WriteStreamPortable on: (String new: 100).
+	aString
+		do: [:chara | stream nextPut: (chara = $: ifTrue: [$.] ifFalse: [chara])].
+	name := stream contents
 %
 
 category: 'accessing'
@@ -703,7 +697,14 @@ category: 'accessing'
 method: CypressPackageStructure
 packageName
 
-	^self name copyWithoutSuffix: self packageExtension
+	| extension extensionSize stopIndex |
+	extension := self packageExtension.
+	extensionSize := extension size.
+	stopIndex := self name
+				indexOfSubCollection: extension
+				startingAt: self name size - extensionSize + 1
+				ifAbsent: [self name size + 1].
+	^self name copyFrom: 1 to: stopIndex - 1
 %
 
 category: 'accessing'
@@ -732,6 +733,86 @@ snapshot
 %
 
 ! Class Implementation for CypressJsonError
+
+! Class Implementation for CypressGsGeneralDependencySorter
+
+! ------------------- Class methods for CypressGsGeneralDependencySorter
+
+category: 'instance creation'
+classmethod: CypressGsGeneralDependencySorter
+on: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock
+	"Create an instance of the receiver capable for sorting the dependencies of someCandidates.
+	 aOneArgBlock is used to evaluate the key of the object depended on for a candidate.
+	 anotherOneArgBlock is used to evaluate the key of the candidate itself."
+
+	^self new
+		initializeOn: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock;
+		yourself.
+%
+
+! ------------------- Instance methods for CypressGsGeneralDependencySorter
+
+category: 'sorting - private'
+method: CypressGsGeneralDependencySorter
+determineGraphRoots
+  ^ dependencyGraphs
+    selectAssociations: [ :each | (candidateAliasMap includesKey: each key) not ]
+%
+
+category: 'initializing - private'
+method: CypressGsGeneralDependencySorter
+initializeOn: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock
+
+	candidates := someCandidates.
+	dependsOnConverter := aOneArgBlock.
+	dependentConverter := anotherOneArgBlock.
+	individualDependencyMap := Dictionary new.
+	dependencyGraphs := Dictionary new.
+	candidateAliasMap := Dictionary new
+%
+
+category: 'sorting'
+method: CypressGsGeneralDependencySorter
+inOrder
+  | sorted sortedRoots |
+  sorted := OrderedCollection new.
+  self mapCandidatesIntoGraphs.
+  sortedRoots := SortedCollection sortBlock: [ :a :b | a key <= b key ].
+  self determineGraphRoots associationsDo: [ :assoc | sortedRoots add: assoc ].
+  sortedRoots do: [ :assoc | self transcribeGraph: assoc value into: sorted ].
+  ^ sorted
+%
+
+category: 'sorting - private'
+method: CypressGsGeneralDependencySorter
+mapCandidatesIntoGraphs
+
+	| dependsOnKey dependentKey |
+	candidates do: 
+			[:each |
+			| individualDependency |
+			dependsOnKey := dependsOnConverter value: each.
+			dependentKey := dependentConverter value: each.
+			candidateAliasMap at: dependentKey put: each.
+			individualDependencyMap at: dependsOnKey ifAbsentPut: [Dictionary new].
+			individualDependencyMap at: dependentKey ifAbsentPut: [Dictionary new].
+			individualDependency := individualDependencyMap
+						associationAt: dependsOnKey.
+			(dependencyGraphs includesKey: dependsOnKey)
+				ifFalse: [dependencyGraphs add: individualDependency].
+			individualDependency value
+				add: (individualDependencyMap associationAt: dependentKey)]
+%
+
+category: 'sorting - private'
+method: CypressGsGeneralDependencySorter
+transcribeGraph: subtree into: sorted
+  (subtree keys asSortedCollection: [ :a :b | a <= b ])
+    do: [ :name | | subsubtree |
+      subsubtree := subtree at: name.
+      sorted add: (candidateAliasMap at: name).
+      self transcribeGraph: subsubtree into: sorted ]
+%
 
 ! Class Implementation for CypressJsonParser
 
@@ -1069,270 +1150,7 @@ whitespace
 		whileTrue: [ stream next ]
 %
 
-! Class Implementation for GsGeneralDependencySorter
-
-! ------------------- Class methods for GsGeneralDependencySorter
-
-category: 'instance creation'
-classmethod: GsGeneralDependencySorter
-on: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock
-	"Create an instance of the receiver capable for sorting the dependencies of someCandidates.
-	 aOneArgBlock is used to evaluate the key of the object depended on for a candidate.
-	 anotherOneArgBlock is used to evaluate the key of the candidate itself."
-
-	^self new
-		initializeOn: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock;
-		yourself.
-%
-
-! ------------------- Instance methods for GsGeneralDependencySorter
-
-category: 'sorting - private'
-method: GsGeneralDependencySorter
-determineGraphRoots
-  ^ dependencyGraphs
-    selectAssociations: [ :each | (candidateAliasMap includesKey: each key) not ]
-%
-
-category: 'initializing - private'
-method: GsGeneralDependencySorter
-initializeOn: someCandidates dependsOn: aOneArgBlock dependent: anotherOneArgBlock
-
-	candidates := someCandidates.
-	dependsOnConverter := aOneArgBlock.
-	dependentConverter := anotherOneArgBlock.
-	individualDependencyMap := Dictionary new.
-	dependencyGraphs := Dictionary new.
-	candidateAliasMap := Dictionary new
-%
-
-category: 'sorting'
-method: GsGeneralDependencySorter
-inOrder
-  | sorted sortedRoots |
-  sorted := OrderedCollection new.
-  self mapCandidatesIntoGraphs.
-  sortedRoots := SortedCollection sortBlock: [ :a :b | a key <= b key ].
-  self determineGraphRoots associationsDo: [ :assoc | sortedRoots add: assoc ].
-  sortedRoots do: [ :assoc | self transcribeGraph: assoc value into: sorted ].
-  ^ sorted
-%
-
-category: 'sorting - private'
-method: GsGeneralDependencySorter
-mapCandidatesIntoGraphs
-
-	| dependsOnKey dependentKey |
-	candidates do: 
-			[:each |
-			| individualDependency |
-			dependsOnKey := dependsOnConverter value: each.
-			dependentKey := dependentConverter value: each.
-			candidateAliasMap at: dependentKey put: each.
-			individualDependencyMap at: dependsOnKey ifAbsentPut: [Dictionary new].
-			individualDependencyMap at: dependentKey ifAbsentPut: [Dictionary new].
-			individualDependency := individualDependencyMap
-						associationAt: dependsOnKey.
-			(dependencyGraphs includesKey: dependsOnKey)
-				ifFalse: [dependencyGraphs add: individualDependency].
-			individualDependency value
-				add: (individualDependencyMap associationAt: dependentKey)]
-%
-
-category: 'sorting - private'
-method: GsGeneralDependencySorter
-transcribeGraph: subtree into: sorted
-  (subtree keys asSortedCollection: [ :a :b | a <= b ])
-    do: [ :name | | subsubtree |
-      subsubtree := subtree at: name.
-      sorted add: (candidateAliasMap at: name).
-      self transcribeGraph: subsubtree into: sorted ]
-%
-
 ! Class Extensions
-
-! Class Extension for Array
-
-! ------------------- Instance methods for Array
-
-category: '*Cypress-Structure'
-method: Array
-asCypressPropertyObject
-
-	^self collect: [:each | each asCypressPropertyObject]
-%
-
-category: '*Cypress-Structure'
-method: Array
-writeCypressJsonOn: aStream indent: startIndent
-
-	| indent |
-	aStream
-		nextPutAll: '[';
-		lf.
-	indent := startIndent + 1.
-	1 to: self size
-		do: 
-			[:index |
-			| item |
-			item := self at: index.
-			aStream tab: indent.
-			item writeCypressJsonOn: aStream indent: indent.
-			index < self size
-				ifTrue: 
-					[aStream
-						nextPutAll: ',';
-						lf]].
-	self size = 0 ifTrue: [aStream tab: indent].
-	aStream nextPutAll: ' ]'
-%
-
-! Class Extension for Boolean
-
-! ------------------- Instance methods for Boolean
-
-category: '*Cypress-Structure'
-method: Boolean
-writeCypressJsonOn: aStream indent: startIndent
-
-	aStream nextPutAll: self printString
-%
-
-! Class Extension for Dictionary
-
-! ------------------- Instance methods for Dictionary
-
-category: '*Cypress-Structure'
-method: Dictionary
-asCypressPropertyObject
-
-	| result |
-	result := self class new: self size.
-	self associationsDo: [:assoc | result at: assoc key put: assoc value asCypressPropertyObject].
-	^result.
-%
-
-category: '*Cypress-Structure'
-method: Dictionary
-writeCypressJsonOn: aStream indent: startIndent
-  | indent cnt |
-  indent := startIndent.
-  aStream
-    nextPutAll: '{';
-    lf.
-  cnt := 0.
-  indent := indent + 1.
-  self keys asSortedCollection
-    do: [ :key | 
-      | value |
-      value := self at: key.
-      cnt := cnt + 1.
-      aStream tab: indent.
-      key writeCypressJsonOn: aStream indent: indent.
-      aStream nextPutAll: ' : '.
-      value writeCypressJsonOn: aStream indent: indent.
-      cnt < self size
-        ifTrue: [ 
-          aStream
-            nextPutAll: ',';
-            lf ] ].
-  self size = 0
-    ifTrue: [ aStream tab: indent ].
-  aStream nextPutAll: ' }'
-%
-
-category: '*Cypress-Structure'
-method: Dictionary
-writeFiletreeJsonOn: aStream indent: startIndent
-  | indent cnt |
-  indent := startIndent.
-  aStream
-    nextPutAll: '{';
-    lf.
-  cnt := 0.
-  indent := indent + 1.
-  self keys asSortedCollection
-    do: [ :key | 
-      | value |
-      value := self at: key.
-      cnt := cnt + 1.
-      aStream tab: indent.
-      key writeCypressJsonOn: aStream indent: indent.
-      aStream nextPutAll: ' : '.
-      value writeFiletreeJsonOn: aStream indent: indent.
-      cnt < self size
-        ifTrue: [ 
-          aStream
-            nextPutAll: ',';
-            lf ] ].
-  self size = 0
-    ifTrue: [ aStream tab: indent ].
-  aStream
-    nextPutAll: ' }';
-    lf
-%
-
-! Class Extension for Number
-
-! ------------------- Instance methods for Number
-
-category: '*Cypress-Structure'
-method: Number
-writeCypressJsonOn: aStream indent: startIndent
-
-	aStream nextPutAll: self printString
-%
-
-! Class Extension for Object
-
-! ------------------- Instance methods for Object
-
-category: '*Cypress-Structure'
-method: Object
-asCypressPropertyObject
-
-	^self
-%
-
-category: '*Cypress-Structure'
-method: Object
-writeCypressJsonOn: fileStream
-
-	self writeCypressJsonOn: fileStream indent: 0
-%
-
-category: '*Cypress-Structure'
-method: Object
-writeFiletreeJsonOn: fileStream
-  self writeFiletreeJsonOn: fileStream indent: 0
-%
-
-category: '*Cypress-Structure'
-method: Object
-writeFiletreeJsonOn: aStream indent: startIndent
-  ^self writeCypressJsonOn: aStream indent: startIndent
-%
-
-! Class Extension for String
-
-! ------------------- Instance methods for String
-
-category: '*Cypress-Structure'
-method: String
-asCypressPropertyObject
-
-	^self unescapePercents withUnixLineEndings
-%
-
-category: '*Cypress-Structure'
-method: String
-writeCypressJsonOn: aStream indent: startIndent
-
-	aStream
-		nextPutAll: '"';
-		nextPutAll: self withUnixLineEndings encodeAsUTF8 escapePercents;
-		nextPutAll: '"'
-%
 
 ! Class initializers 
 

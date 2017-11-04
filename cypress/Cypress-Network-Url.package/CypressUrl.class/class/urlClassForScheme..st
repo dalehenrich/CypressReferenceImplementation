@@ -3,6 +3,9 @@ notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT lice
 category: parsing
 "
 urlClassForScheme: scheme
-
-	^self allSubclasses detect: [:urlClass | urlClass schemeName = scheme]
+	| allSubclasses |
+	allSubclasses := self userId = System myUserProfile userId
+		ifTrue: [ ClassOrganizer new allSubclassesOf: self ]
+		ifFalse: [ (ClassOrganizer newWithRoot: self forUserId: self userId) allSubclassesOf: self ].
+	^allSubclasses detect: [:urlClass | urlClass schemeName = scheme]
 		ifNone: [CypressGenericUrl]

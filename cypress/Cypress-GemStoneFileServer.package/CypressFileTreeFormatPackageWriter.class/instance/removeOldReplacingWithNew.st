@@ -11,6 +11,6 @@ removeOldReplacingWithNew
        Equivalent behavior to MCFileTreeRepository with Metadata property set to false."
 			(self string: filename endsWith: 'monticello.meta')
 				or: [ (self string: filename endsWith: '.filetree')
-					or: [self string: filename endsWith: 'methodProperites.json']]].
+					or: [self string: filename endsWith: 'methodProperties.json']]].
 	self writePropertiesFile.
 	self writePackageStructure

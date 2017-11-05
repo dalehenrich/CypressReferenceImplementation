@@ -10,6 +10,7 @@ removeOldReplacingWithNew
 			"do not delete the monticello.meta directory to preserve existing Monticello meta data.
        Equivalent behavior to MCFileTreeRepository with Metadata property set to false."
 			(self string: filename endsWith: 'monticello.meta')
-				or: [self string: filename endsWith: '.filetree']].
+				or: [ (self string: filename endsWith: '.filetree')
+					or: [self string: filename endsWith: 'methodProperites.json']]].
 	self writePropertiesFile.
 	self writePackageStructure

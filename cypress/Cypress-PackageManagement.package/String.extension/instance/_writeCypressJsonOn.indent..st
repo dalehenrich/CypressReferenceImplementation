@@ -8,6 +8,5 @@ _writeCypressJsonOn: aStream indent: startIndent
 	aStream nextPutAll: '"'.
 	CypressUrl
 		writeWithHttpEscapes: (CypressObject normalizeLineEndingsOf: self)
-				encodeAsUTF8
 		on: aStream.
 	aStream nextPutAll: '"'

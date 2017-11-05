@@ -26,5 +26,5 @@ deleteAll: aDirectory rejecting: rejectBlock
 								ifFalse: 
 									[(rejectBlock value: filename)
 										ifFalse: 
-											[self deleteAll: filename.
+											[self deleteAll: filename rejecting: rejectBlock.
 											GsFile removeServerDirectory: filename]]]]]

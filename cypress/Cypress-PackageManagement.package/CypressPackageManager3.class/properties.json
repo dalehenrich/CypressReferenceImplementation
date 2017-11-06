@@ -1,0 +1,15 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"knownRepositories",
+		"defaultSymbolDictionaryName",
+		"resolvedPackageReferences" ],
+	"name" : "CypressPackageManager3",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

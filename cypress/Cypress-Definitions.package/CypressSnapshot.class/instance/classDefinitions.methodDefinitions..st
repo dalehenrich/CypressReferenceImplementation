@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: enumerating
-"
+enumerating
 classDefinitions: classBlock methodDefinitions: methodBlock
 
 	self definitions do: [:definition |

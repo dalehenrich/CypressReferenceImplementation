@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: private-initialization
-"
+private-initialization
 initializeFromPathString: aPathString
 	"<aPathString> is a file path as a String.
 	We construct a path collection using various heuristics."

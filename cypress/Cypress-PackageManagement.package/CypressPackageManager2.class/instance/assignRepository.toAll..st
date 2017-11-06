@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: Updating
-"
+Updating
 assignRepository: aRepository toAll: somePackageInformations
 	"Assign to those having no repository information and add to those with.
 	 Those without a repository need to be converted to Known Package Information instances."

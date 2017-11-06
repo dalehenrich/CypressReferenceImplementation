@@ -1,0 +1,15 @@
+{
+	"category" : "Cypress-Structure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"source",
+		"isMetaclass",
+		"classStructure" ],
+	"name" : "CypressMethodStructure",
+	"pools" : [
+		 ],
+	"super" : "CypressStructure",
+	"type" : "normal" }

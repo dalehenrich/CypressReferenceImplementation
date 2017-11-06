@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: Accessing - private
-"
+Accessing - private
 potentialPackageNames
 	"Answer a list of 'package names' from classes and methods.
 	 The class category is the package name, if the class is in a package at all.

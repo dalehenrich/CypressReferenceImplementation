@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: loading
-"
+loading
 retryFailedLoads
 	"In case any of the failed loads were resolved by subsequent
 	 patch operations after the initial attempt or by editting of the

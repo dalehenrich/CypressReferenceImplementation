@@ -1,10 +1,10 @@
-"
-notice: Copyright 2013,2017 GemTalk Systems, LLC. Open source under the MIT license.
-category: baseline
-"
+baseline
 baseline: spec
   <baseline>
-  spec for: #'gemstone64' do: [ spec
+  spec
+    for: #'gemstone64'
+    do: [ 
+      spec
         package: 'Cypress-Definitions';
         package: 'Cypress-Structure'
           with: [ spec requires: 'Cypress-Definitions' ];
@@ -15,14 +15,21 @@ baseline: spec
         package: 'Cypress-Comparison'
           with: [ spec requires: 'Cypress-Definitions' ];
         package: 'Cypress-Network-Url';
-        package: 'Cypress-PackageManagement' with: [ spec
+        package: 'Cypress-PackageManagement'
+          with: [ 
+              spec
                 requires:
                   #('Cypress-Definitions' 'Cypress-Network-Url' 'Cypress-GemStoneFileServer') ];
+        package: 'Cypress-Environmental-Tools'
+          with: [ spec requires: #('Cypress-Definitions' 'Cypress-PackageManagement') ];
         package: 'Cypress-Mocks';
-        package: 'Cypress-Tests' with: [ spec
+        package: 'Cypress-Tests'
+          with: [ 
+              spec
                 requires:
                   #('Cypress-Mocks' 'Cypress-Definitions' 'Cypress-Structure' 'Cypress-PackageManagement') ];
-        package: 'NetworkTests' with: [ spec requires: #('Cypress-Network-Url') ];
+        package: 'NetworkTests'
+          with: [ spec requires: #('Cypress-Network-Url') ];
         yourself.
       spec
         group: 'default' with: #('Core');

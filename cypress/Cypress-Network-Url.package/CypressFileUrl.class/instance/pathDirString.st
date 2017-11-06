@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: paths
-"
+paths
 pathDirString
 	"Path to directory as url, using slash as delimiter.
 	Filename is left out."

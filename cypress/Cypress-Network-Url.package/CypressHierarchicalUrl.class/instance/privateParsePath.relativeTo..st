@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: parsing
-"
+parsing
 privateParsePath: remainder relativeTo: basePath
 
 	| nextTok s parsedPath |

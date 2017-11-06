@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: converting
-"
+converting
 asCypressMethodDefinition
 	"Try to coerce Unicode source to simple Strings when possible."
 

@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: parsing
-"
+parsing
 schemeNameForString: aString
 	"Get the scheme name from a string, or return nil if it's not specified. 
 	Used in internal parsing routines - an outsider may as well use asUrl. 

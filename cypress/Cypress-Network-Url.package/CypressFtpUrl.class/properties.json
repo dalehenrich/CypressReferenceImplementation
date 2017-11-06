@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-Network-Url",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressFtpUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressHierarchicalUrl",
+	"type" : "normal" }

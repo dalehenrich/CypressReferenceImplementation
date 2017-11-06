@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: updating - type
-"
+updating - type
 beUnknown
 	"Be designated as possibly representing a package, but not known to do so."
 

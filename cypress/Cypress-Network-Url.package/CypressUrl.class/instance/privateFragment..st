@@ -1,6 +1,3 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: fragment
-"
+fragment
 privateFragment: aString
 	fragment := aString

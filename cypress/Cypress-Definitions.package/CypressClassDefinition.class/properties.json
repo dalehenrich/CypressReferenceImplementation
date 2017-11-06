@@ -1,0 +1,22 @@
+{
+	"category" : "Cypress-Definitions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"name",
+		"superclassName",
+		"category",
+		"comment",
+		"instVarNames",
+		"classInstVarNames",
+		"classVarNames",
+		"poolDictionaryNames",
+		"subclassType",
+		"defaultSymbolDictionaryName" ],
+	"name" : "CypressClassDefinition",
+	"pools" : [
+		 ],
+	"super" : "CypressDefinition",
+	"type" : "normal" }

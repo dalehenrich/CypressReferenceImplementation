@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: updating - private
-"
+updating - private
 determineKnownPackages
 
 	^(packageInformationList select: [:each | each repository notNil])

@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: utilities
-"
+utilities
 directoryEntriesFrom: aDirectory
 	"Answer fully qualified paths to the contents of aDirectory."
 

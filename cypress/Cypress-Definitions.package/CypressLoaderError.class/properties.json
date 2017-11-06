@@ -1,0 +1,14 @@
+{
+	"category" : "Cypress-Definitions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"patchOperation",
+		"exception" ],
+	"name" : "CypressLoaderError",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

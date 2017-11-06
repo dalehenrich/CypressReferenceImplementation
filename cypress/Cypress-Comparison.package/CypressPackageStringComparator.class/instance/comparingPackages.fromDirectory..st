@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: initializing
-"
+initializing
 comparingPackages: someNames fromDirectory: aDirectory
   (directoryPackageMap at: aDirectory ifAbsentPut: [ OrderedCollection new ])
     addAll: someNames.

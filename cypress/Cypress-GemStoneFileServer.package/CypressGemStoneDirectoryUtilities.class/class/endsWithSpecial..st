@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: private
-"
+private
 endsWithSpecial: filename
 	"Answer true if the given filename ends with any of the special sequences
 	'/..' '/.' '\..' '\.', false otherwise."

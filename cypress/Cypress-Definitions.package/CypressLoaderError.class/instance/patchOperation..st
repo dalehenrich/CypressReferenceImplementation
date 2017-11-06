@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: updating
-"
+updating
 patchOperation: aCypressPatchOperation
 	"Assign the Patch Operation that could not be applied."
 

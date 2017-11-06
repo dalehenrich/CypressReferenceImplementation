@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: encoding
-"
+encoding
 writeWithHttpEscapes: aCollection on: aStream
 	"Write the given string or Utf8 on the stream with 'dangerous' characters 
 	escaped to their %XX form, for use in HTTP transactions.

@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: copying
-"
+copying
 postCopy
 	"Be sure not to share the path with the copy."
 

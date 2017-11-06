@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: writing - private
-"
+writing - private
 fileOutClassDeclaration: classStructure on: aStream
 	"This is the structure for VW/Pharo  class definitions. It may or may not be portable
 	to all dialects that use chunk-format fileins. It does not attempt to handle VW

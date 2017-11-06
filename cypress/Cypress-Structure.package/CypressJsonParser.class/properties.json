@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-Structure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"stream" ],
+	"name" : "CypressJsonParser",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

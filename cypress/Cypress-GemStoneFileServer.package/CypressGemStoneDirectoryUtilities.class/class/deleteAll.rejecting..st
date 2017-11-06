@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: utilities
-"
+utilities
 deleteAll: aDirectory rejecting: rejectBlock
 	"Delete all the files and directories under the named directory.
        Reject file and directores in aDirectory that are rejected by rejectBlock.

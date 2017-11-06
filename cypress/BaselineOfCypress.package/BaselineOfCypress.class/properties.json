@@ -1,0 +1,13 @@
+{
+	"category" : "BaselineOfCypress",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfCypress",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

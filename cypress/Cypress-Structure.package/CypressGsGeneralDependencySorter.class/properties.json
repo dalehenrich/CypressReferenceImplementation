@@ -1,0 +1,18 @@
+{
+	"category" : "Cypress-Structure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"candidates",
+		"dependsOnConverter",
+		"dependentConverter",
+		"individualDependencyMap",
+		"dependencyGraphs",
+		"candidateAliasMap" ],
+	"name" : "CypressGsGeneralDependencySorter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

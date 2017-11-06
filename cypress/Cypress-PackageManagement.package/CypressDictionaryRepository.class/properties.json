@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"dictionary" ],
+	"name" : "CypressDictionaryRepository",
+	"pools" : [
+		 ],
+	"super" : "CypressAbstractRepository",
+	"type" : "normal" }

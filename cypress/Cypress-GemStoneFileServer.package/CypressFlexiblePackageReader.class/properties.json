@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-GemStoneFileServer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressFlexiblePackageReader",
+	"pools" : [
+		 ],
+	"super" : "CypressAbstractPackageReader",
+	"type" : "normal" }

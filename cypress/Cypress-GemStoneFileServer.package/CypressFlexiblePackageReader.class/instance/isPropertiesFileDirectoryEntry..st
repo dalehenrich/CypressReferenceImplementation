@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: reading
-"
+reading
 isPropertiesFileDirectoryEntry: entry
 	"Expect .ston properties file, but tolerate .json if present."
 

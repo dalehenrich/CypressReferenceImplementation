@@ -1,0 +1,19 @@
+{
+	"category" : "Cypress-Network-Url",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"schemeName",
+		"authority",
+		"path",
+		"query",
+		"port",
+		"username",
+		"password" ],
+	"name" : "CypressHierarchicalUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressUrl",
+	"type" : "normal" }

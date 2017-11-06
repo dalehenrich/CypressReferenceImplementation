@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: accessing
-"
+accessing
 symbolDictionaryForClassNamed: aString or: aBlock
 	"Answer the SymbolDictionary containing the named class.
 	 If there are multiple answers, answer the first.

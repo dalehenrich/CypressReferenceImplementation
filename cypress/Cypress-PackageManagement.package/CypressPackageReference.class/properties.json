@@ -1,0 +1,14 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"package",
+		"branch" ],
+	"name" : "CypressPackageReference",
+	"pools" : [
+		 ],
+	"super" : "CypressReference",
+	"type" : "normal" }

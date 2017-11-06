@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: Updating
-"
+Updating
 saveAs: aKey
 	"Save the receiver in the class' collection of named managers
 	 under the specified key.

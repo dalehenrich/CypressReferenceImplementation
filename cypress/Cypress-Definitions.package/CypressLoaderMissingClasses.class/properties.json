@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-Definitions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"requirementsMap" ],
+	"name" : "CypressLoaderMissingClasses",
+	"pools" : [
+		 ],
+	"super" : "Error",
+	"type" : "normal" }

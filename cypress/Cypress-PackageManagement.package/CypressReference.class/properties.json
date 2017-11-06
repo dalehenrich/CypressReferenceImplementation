@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"name" ],
+	"name" : "CypressReference",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

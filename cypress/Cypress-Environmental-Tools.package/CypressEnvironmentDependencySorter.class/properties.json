@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-Environmental-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressEnvironmentDependencySorter",
+	"pools" : [
+		 ],
+	"super" : "CypressDependencySorter",
+	"type" : "normal" }

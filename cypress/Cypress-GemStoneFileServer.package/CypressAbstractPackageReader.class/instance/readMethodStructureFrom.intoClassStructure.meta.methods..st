@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: reading
-"
+reading
 readMethodStructureFrom: fileStream intoClassStructure: classStructure meta: isMeta methods: methods
 
 	self subclassResponsibility: #readMethodStructureFrom:intoClassStructure:meta:methods:

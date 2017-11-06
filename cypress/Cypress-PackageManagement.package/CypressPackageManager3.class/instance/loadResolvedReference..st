@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: loading
-"
+loading
 loadResolvedReference: resolvedReference
   | cypressLoader package repository snapshot |
   cypressLoader := CypressLoader new.

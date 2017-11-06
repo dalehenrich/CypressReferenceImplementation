@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: private
-"
+private
 expect: aString
 	"Expects aString and consume input, throw an error otherwise."
 

@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: loading
-"
+loading
 postLoad
 	"This is where the obsoletion is taken into account ..."
 

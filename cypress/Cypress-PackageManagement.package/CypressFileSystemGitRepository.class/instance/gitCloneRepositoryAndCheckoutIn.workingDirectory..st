@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: git querying
-"
+git querying
 gitCloneRepositoryAndCheckoutIn: aDirectoryName workingDirectory: workingDirectory
   "Do a clone on the remote repository and do a checkout on it to get the right branch. Complement the directory as well with the working directory."
 

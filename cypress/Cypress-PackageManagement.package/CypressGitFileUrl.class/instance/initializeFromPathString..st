@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: private-initialization
-"
+private-initialization
 initializeFromPathString: aPathString
   | projectDelim repoDelimIndex branchOrTagDelimIndex |
   projectBranchOrTag := repositoryPath := nil.

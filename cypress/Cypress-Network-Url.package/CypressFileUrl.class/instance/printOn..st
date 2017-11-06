@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: printing
-"
+printing
 printOn: aStream
 	"Return the FileUrl according to RFC3986
 		'file:'['//'<host>]<path>#<fragment>

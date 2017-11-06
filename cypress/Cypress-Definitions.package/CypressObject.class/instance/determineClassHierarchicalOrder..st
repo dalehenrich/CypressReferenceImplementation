@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: sorting
-"
+sorting
 determineClassHierarchicalOrder: someClasses
 	"Returns an ordered collection of the specified classes such that
 	 hierarchical dependencies come first."

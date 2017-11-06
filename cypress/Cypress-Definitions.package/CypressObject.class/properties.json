@@ -1,0 +1,13 @@
+{
+	"category" : "Cypress-Definitions",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

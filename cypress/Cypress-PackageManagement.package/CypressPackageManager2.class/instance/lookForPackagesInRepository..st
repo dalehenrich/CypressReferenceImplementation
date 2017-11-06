@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: Updating
-"
+Updating
 lookForPackagesInRepository: aRepository
 	"Find the packages in the repository and update the list
 	 of package information accordingly."

@@ -1,6 +1,3 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: instance creation
-"
+instance creation
 name: aString repository: aRepository
 	^ self basicNew initializeName: aString repository: aRepository

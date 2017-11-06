@@ -1,7 +1,4 @@
-"
-notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
-category: updating
-"
+updating
 lookForUnloadedPackagesInRepository: aCypressRepository
 	"Add known packages for any Cypress file outs in the specified directory."
 

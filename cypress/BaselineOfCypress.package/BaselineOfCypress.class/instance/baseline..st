@@ -35,6 +35,6 @@ baseline: spec
         group: 'default' with: #('Core');
         group: 'Core'
           with:
-            #('Cypress-Structure' 'Cypress-MesssageDigest' 'Cypress-PackageManagement' 'Cypress-Comparison');
+            #('Cypress-Structure' 'Cypress-MesssageDigest' 'Cypress-PackageManagement' 'Cypress-Comparison' 'Cypress-Environmental-Tools' );
         group: 'Tests' with: #('Cypress-Tests' 'NetworkTests');
         yourself ]

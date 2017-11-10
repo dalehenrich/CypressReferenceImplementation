@@ -1,6 +1,6 @@
 utilities
 readStreamFor: filePath in: aDirectory do: aOneArgBlock
 
-	self
+	^ self
 		readStreamFor: (self directoryFromPath: filePath relativeTo: aDirectory)
 		do: aOneArgBlock

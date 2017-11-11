@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-Environmental-Tools",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"lookupSymbolList" ],
+	"name" : "CypressEnvironmentPackageDefinition",
+	"pools" : [
+		 ],
+	"super" : "CypressPackageDefinition" }

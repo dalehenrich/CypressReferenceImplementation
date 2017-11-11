@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"remoteUrl" ],
+	"name" : "CypressFileSystemGitRepository",
+	"pools" : [
+		 ],
+	"super" : "CypressFileSystemRepository" }

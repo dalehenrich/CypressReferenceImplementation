@@ -1,4 +1,7 @@
-*cypress-environmental-tools
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: *cypress-environmental-tools
+"
 persistentSuperclassForEnv: envId put: aValue
   "aValue should be a GsMethodDictionary, or nil ,
    caller responsible for _refreshClassCache "

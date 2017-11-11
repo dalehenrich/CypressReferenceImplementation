@@ -1,4 +1,7 @@
-constants
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: constants
+"
 schemeName
   "A gitcypress url with a host is the target for a remote. All other parameters are optional.
 	Parameters are:

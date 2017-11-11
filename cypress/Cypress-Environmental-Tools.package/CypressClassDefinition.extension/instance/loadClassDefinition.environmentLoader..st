@@ -1,4 +1,7 @@
-*cypress-environmental-tools
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: *cypress-environmental-tools
+"
 loadClassDefinition: aSymbolDictionaryName environmentLoader: environmentLoader
   "Create a new version of the defined class. If the class already exists,
 	 copy the behaviors and state from the old version."

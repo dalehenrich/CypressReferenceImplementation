@@ -1,4 +1,7 @@
-utilities
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: utilities
+"
 directoryFileNamesAndContents: aDirectory into: aDictionary
 	"Walk the directory tree starting at aDirectory and
 	 answer a map of the names of the files in the tree to

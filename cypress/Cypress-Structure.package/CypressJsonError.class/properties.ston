@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-Structure",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressJsonError",
+	"pools" : [
+		 ],
+	"super" : "Error" }

@@ -1,4 +1,7 @@
-Loading
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: Loading
+"
 loadPackageFrom: aKnownPackageInformation defaultSymbolDictionaryName: defaultSymbolDictionaryNameOrNil inRepository: aRepository
   | snapshot summary loader |
   snapshot := (aRepository

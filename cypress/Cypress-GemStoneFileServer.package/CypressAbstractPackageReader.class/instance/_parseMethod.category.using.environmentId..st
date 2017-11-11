@@ -1,4 +1,7 @@
-parsing
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: parsing
+"
 _parseMethod: source category: cat using: aSymbolList environmentId: anEnvironmentId
 	"Compiles the method into disposable dictionaries, if possible.
 	 Attempts auto-recompile for undefinedSymbols.

@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-PackageManagement",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		 ],
+	"name" : "CypressCypressFileUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressAbstractFileUrl" }

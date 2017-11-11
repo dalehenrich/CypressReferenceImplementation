@@ -1,4 +1,7 @@
-writing - private
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: writing - private
+"
 writeClassTypeMessage: classStructure on: aStream hasInstanceVariables: instanceVariableBlock
   | classType classTypeMessage hasInstanceVariables |
   hasInstanceVariables := true.

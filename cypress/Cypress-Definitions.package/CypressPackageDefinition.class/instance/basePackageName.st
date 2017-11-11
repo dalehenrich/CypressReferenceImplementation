@@ -1,4 +1,7 @@
-accessing
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: accessing
+"
 basePackageName
   "package name may have a platform/branch extension, when comparing against category/protocol names, extension is ignored"
 

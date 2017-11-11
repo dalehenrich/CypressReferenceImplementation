@@ -1,4 +1,7 @@
-private
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: private
+"
 orderBySuperclass: aClass from: toBeOrdered into: order ignoring: processed
 	"Private. Add to 'order', superclasses first, aClass and any of its superclasses 
 	that appear in 'toBeOrdered' but do not appear in 'processed'.

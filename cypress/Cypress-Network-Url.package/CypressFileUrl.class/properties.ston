@@ -1,0 +1,14 @@
+{
+	"category" : "Cypress-Network-Url",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"instvars" : [
+		"host",
+		"path",
+		"isAbsolute" ],
+	"name" : "CypressFileUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressUrl" }

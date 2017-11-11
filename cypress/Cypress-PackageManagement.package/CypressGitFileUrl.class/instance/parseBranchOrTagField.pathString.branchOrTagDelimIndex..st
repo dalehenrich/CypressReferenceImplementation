@@ -1,4 +1,7 @@
-private-initialization
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: private-initialization
+"
 parseBranchOrTagField: parseBlock pathString: aPathString branchOrTagDelimIndex: branchOrTagDelimIndex
   | strm done escaped repoDelimIndex |
   strm := WriteStream on: String new.

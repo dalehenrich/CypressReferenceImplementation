@@ -1,3 +1,6 @@
-printing
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: printing
+"
 httpsAccessString
   ^ 'https://' , self host , self projectPath , '.git'

@@ -1,4 +1,7 @@
-encoding
+"
+notice: Copyright 2013,2016 GemTalk Systems, LLC. Open source under the MIT license.
+category: encoding
+"
 decodeHttpEscapesOf: aString
 	"decode string including %XX form
 	 (adapted from Pharo 2.0)"

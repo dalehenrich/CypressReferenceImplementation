@@ -1,0 +1,12 @@
+{
+	"category" : "Cypress-Network-Url",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"Passwords" ],
+	"instvars" : [
+		"realm" ],
+	"name" : "CypressHttpUrl",
+	"pools" : [
+		 ],
+	"super" : "CypressHierarchicalUrl" }

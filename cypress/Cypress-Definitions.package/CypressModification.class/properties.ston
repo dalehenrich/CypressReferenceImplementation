@@ -5,8 +5,8 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"obsoletion",
-		"modification" ],
+		"modification",
+		"obsoletion" ],
 	"name" : "CypressModification",
 	"pools" : [
 		 ],

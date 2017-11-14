@@ -5,9 +5,9 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"required",
+		"orderedItems",
 		"provided",
-		"orderedItems" ],
+		"required" ],
 	"name" : "CypressDependencySorter",
 	"pools" : [
 		 ],

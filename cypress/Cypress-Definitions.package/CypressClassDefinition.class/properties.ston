@@ -5,16 +5,16 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"name",
-		"superclassName",
 		"category",
-		"comment",
-		"instVarNames",
 		"classInstVarNames",
 		"classVarNames",
+		"comment",
+		"defaultSymbolDictionaryName",
+		"instVarNames",
+		"name",
 		"poolDictionaryNames",
 		"subclassType",
-		"defaultSymbolDictionaryName" ],
+		"superclassName" ],
 	"name" : "CypressClassDefinition",
 	"pools" : [
 		 ],

@@ -5,8 +5,8 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"patchOperation",
-		"exception" ],
+		"exception",
+		"patchOperation" ],
 	"name" : "CypressLoaderError",
 	"pools" : [
 		 ],

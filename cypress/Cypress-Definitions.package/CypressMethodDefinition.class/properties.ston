@@ -5,11 +5,11 @@
 	"classvars" : [
 		 ],
 	"instvars" : [
-		"classIsMeta",
-		"source",
 		"category",
+		"classIsMeta",
+		"className",
 		"selector",
-		"className" ],
+		"source" ],
 	"name" : "CypressMethodDefinition",
 	"pools" : [
 		 ],
